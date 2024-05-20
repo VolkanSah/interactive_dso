@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -7,7 +6,6 @@
     <title>Interaktive Taktikkarten-Bearbeitung</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,15 +37,7 @@
             cursor: pointer;
         }
         .controls {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
             margin-bottom: 20px;
-        }
-        .controls input, .controls select, .controls button {
-            padding: 10px;
-            margin: 5px;
-            flex: 1;
         }
         .wave-inputs {
             margin-top: 10px;
@@ -60,17 +50,10 @@
 <body>
     <div class="container">
         <h1 class="text-center">Interaktive Taktikkarten-Bearbeitung</h1>
-        <div class="map" id="map" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-            <img src="maps/bonaberti-blank.jpg" alt="Taktikkarte" onclick="addMarker(event)">
+        <div class="map" id="map" onclick="addMarker(event)">
+            <img src="maps/bonaberti-blank.jpg" alt="Taktikkarte">
         </div>
-        <div class="controls">
-            <select id="lager" class="form-control">
-                <!-- Dynamisch gefüllte Lager-Optionen -->
-            </select>
-            <button class="btn btn-primary" onclick="addWaveInputs()"><i class="fas fa-plus"></i> Welle hinzufügen</button>
-        </div>
-        <div id="waveInputsContainer"></div>
+        <div id="lagerContainer"></div>
         <div class="controls">
             <button class="btn btn-success" onclick="generateCard()"><i class="fas fa-map"></i> Karte generieren</button>
             <button class="btn btn-info" onclick="downloadCard()"><i class="fas fa-download"></i> Karte herunterladen</button>
@@ -83,5 +66,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-            
