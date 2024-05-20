@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -48,6 +49,9 @@
             margin: 5px;
             flex: 1;
         }
+        .wave-inputs {
+            margin-top: 10px;
+        }
         #output {
             margin-top: 20px;
         }
@@ -57,22 +61,17 @@
     <div class="container">
         <h1 class="text-center">Interaktive Taktikkarten-Bearbeitung</h1>
         <div class="map" id="map" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img src="maps/bonaberti-blank.jpg" alt="bonaberti">
-            <!-- Beispiel-Marker -->
-            <div class="marker" style="top: 50px; left: 100px;" data-lager="Lager 1" draggable="true" ondragstart="drag(event)" id="marker1"></div>
-            <div class="marker" style="top: 150px; left: 200px;" data-lager="Lager 2" draggable="true" ondragstart="drag(event)" id="marker2"></div>
-            <!-- Weitere Marker hinzufügen -->
+
+            <img src="maps/bonaberti-blank.jpg" alt="Taktikkarte" onclick="addMarker(event)">
         </div>
         <div class="controls">
             <select id="lager" class="form-control">
-                <option value="Lager 1">Lager 1</option>
-                <option value="Lager 2">Lager 2</option>
-                <!-- Weitere Lager hinzufügen -->
+                <!-- Dynamisch gefüllte Lager-Optionen -->
             </select>
-            <input type="text" id="general" class="form-control" placeholder="General">
-            <input type="number" id="truppen" class="form-control" placeholder="Truppenanzahl">
-            <input type="number" id="wellen" class="form-control" placeholder="Anzahl der Wellen">
-            <button class="btn btn-primary" onclick="addWave()"><i class="fas fa-plus"></i> Welle hinzufügen</button>
+            <button class="btn btn-primary" onclick="addWaveInputs()"><i class="fas fa-plus"></i> Welle hinzufügen</button>
+        </div>
+        <div id="waveInputsContainer"></div>
+        <div class="controls">
             <button class="btn btn-success" onclick="generateCard()"><i class="fas fa-map"></i> Karte generieren</button>
             <button class="btn btn-info" onclick="downloadCard()"><i class="fas fa-download"></i> Karte herunterladen</button>
         </div>
@@ -84,3 +83,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+            
