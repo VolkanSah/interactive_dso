@@ -51,7 +51,15 @@
     <div class="container">
         <h1 class="text-center">Interaktive Taktikkarten-Bearbeitung</h1>
         <div class="map" id="map" onclick="addMarker(event)">
-            <img src="maps/bonaberti-blank.jpg" alt="Taktikkarte">
+           <!-- <img src="maps/bonaberti-blank.jpg" alt="Taktikkarte"> -->
+            <label for="maps">Choose a car:</label>
+
+<select name="maps" id="cars">
+  <option value="maps/bonaberti-blank.jpg">Bonaberti</option>
+  <option value="maps/heimatinsel">Heimatinsel</option>
+  <option value="maps/tiki">Mercedes</option>
+  <option value="maps">Audi</option>
+</select> 
         </div>
         <div id="lagerContainer"></div>
         <div class="controls">
