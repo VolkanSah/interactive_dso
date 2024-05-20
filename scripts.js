@@ -1,5 +1,6 @@
 let currentLagerId = 0;
 let markers = [];
+let waves = [];
 
 function addMarker(event) {
     const rect = event.target.getBoundingClientRect();
@@ -15,7 +16,7 @@ function addMarker(event) {
     marker.draggable = true;
     marker.ondragstart = drag;
     marker.onclick = function() {
-        selectLager(marker.dataset.lager);
+        selectLager(marker.dataset.lager, currentLagerId);
     };
     document.getElementById('map').appendChild(marker);
 
@@ -25,9 +26,10 @@ function addMarker(event) {
     currentLagerId++;
 }
 
-function selectLager(lagerId) {
+function selectLager(lagerName, lagerId) {
     const selectedLager = document.getElementById(`lager${lagerId}`);
     selectedLager.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('selectedLager').textContent = `Ausgewähltes Lager: ${lagerName}`;
 }
 
 function addLagerInputs(lagerId, lagerName) {
@@ -83,16 +85,19 @@ function addLagerInputs(lagerId, lagerName) {
     container.appendChild(lagerDiv);
 }
 
-let waves = [];
-
 function addWave(lagerId, general, troop, truppen, wellen) {
-    waves.push({ lagerId, general, troop, truppen, wellen });
+    const wave = { lagerId, general, troop, truppen, wellen };
+    waves.push(wave);
+
+    const waveInfo = document.createElement('p');
+    waveInfo.textContent = `Lager: ${lagerId}, General: ${general}, Truppe: ${troop}, Truppenanzahl: ${truppen}, Wellen: ${wellen}`;
+    document.getElementById(`lager${lagerId}`).appendChild(waveInfo);
 }
 
 function generateCard() {
     let output = '<h2>Generierte Taktikkarte</h2>';
     waves.forEach((wave, index) => {
-        output += `<p>Lager: ${wave.lagerId}, General: ${wave.general}, Truppen: ${wave.truppen}, Wellen: ${wave.wellen}, Truppe: ${wave.troop}</p>`;
+        output += `<p>Lager: ${wave.lagerId}, General: ${wave.general}, Truppe: ${wave.troop}, Truppen: ${wave.truppen}, Wellen: ${wave.wellen}</p>`;
     });
 
     document.getElementById('output').innerHTML = output;
@@ -100,9 +105,9 @@ function generateCard() {
 
 function downloadCard() {
     const element = document.createElement('a');
-    const file = new Blob([document.getElementById('output').innerText], { type: 'text/plain' });
+    const file = new Blob([document.getElementById('output').innerHTML], { type: 'text/html' });
     element.href = URL.createObjectURL(file);
-    element.download = 'taktikkarte.txt';
+    element.download = 'taktikkarte.html';
     document.body.appendChild(element);
     element.click();
 }
