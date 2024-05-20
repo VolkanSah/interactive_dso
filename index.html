@@ -4,11 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interaktive Taktikkarten-Bearbeitung</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .map {
+            position: relative;
+        }
+        .map img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .marker {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .controls input, .controls select, .controls button {
+            padding: 10px;
+            margin: 5px;
+            flex: 1;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Interaktive Taktikkarten-Bearbeitung</h1>
+        <h1 class="text-center">Interaktive Taktikkarten-Bearbeitung</h1>
         <div class="map" id="map" ondrop="drop(event)" ondragover="allowDrop(event)">
             <img src="path/to/your/map.jpg" alt="Taktikkarte">
             <!-- Beispiel-Marker -->
@@ -17,19 +64,23 @@
             <!-- Weitere Marker hinzufügen -->
         </div>
         <div class="controls">
-            <select id="lager">
+            <select id="lager" class="form-control">
                 <option value="Lager 1">Lager 1</option>
                 <option value="Lager 2">Lager 2</option>
                 <!-- Weitere Lager hinzufügen -->
             </select>
-            <input type="text" id="general" placeholder="General">
-            <input type="number" id="truppen" placeholder="Truppenanzahl">
-            <input type="number" id="wellen" placeholder="Anzahl der Wellen">
-            <button onclick="addWave()">Welle hinzufügen</button>
-            <button onclick="generateCard()">Karte generieren</button>
+            <input type="text" id="general" class="form-control" placeholder="General">
+            <input type="number" id="truppen" class="form-control" placeholder="Truppenanzahl">
+            <input type="number" id="wellen" class="form-control" placeholder="Anzahl der Wellen">
+            <button class="btn btn-primary" onclick="addWave()"><i class="fas fa-plus"></i> Welle hinzufügen</button>
+            <button class="btn btn-success" onclick="generateCard()"><i class="fas fa-map"></i> Karte generieren</button>
+            <button class="btn btn-info" onclick="downloadCard()"><i class="fas fa-download"></i> Karte herunterladen</button>
         </div>
         <div id="output"></div>
     </div>
     <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
