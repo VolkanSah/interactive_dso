@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktive Taktikkarten-Bearbeitung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interaktive Taktikkarten-Bearbeitung</h1>
+        <div class="map" id="map">
+            <img src="path/to/your/map.jpg" alt="Taktikkarte">
+            <!-- Beispiel-Marker -->
+            <div class="marker" style="top: 50px; left: 100px;" data-lager="Lager 1"></div>
+            <div class="marker" style="top: 150px; left: 200px;" data-lager="Lager 2"></div>
+            <!-- Weitere Marker hinzufügen -->
+        </div>
+        <div class="controls">
+            <select id="lager">
+                <option value="Lager 1">Lager 1</option>
+                <option value="Lager 2">Lager 2</option>
+                <!-- Weitere Lager hinzufügen -->
+            </select>
+            <input type="text" id="general" placeholder="General">
+            <input type="text" id="truppen" placeholder="Truppen">
+            <button onclick="saveData()">Speichern</button>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
