@@ -42,6 +42,23 @@
         .wave-inputs {
             margin-top: 10px;
         }
+        .camp-info {
+            position: absolute;
+            width: 80px;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: none;
+            z-index: 10;
+        }
+        .camp-info .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .camp-info img {
+            width: 20px;
+            height: 20px;
+        }
         #output {
             margin-top: 20px;
         }
@@ -51,7 +68,7 @@
     <div class="container">
         <h1 class="text-center">Interaktive Taktikkarten-Bearbeitung</h1>
         <div class="map" id="map" onclick="addMarker(event)">
-            <img src="maps/bonaberti-blank.jpg" alt="Taktikkarte">
+            <img src="assets/img/maps/BonabertiBusiness.jpg" alt="Taktikkarte">
         </div>
         <div id="lagerContainer"></div>
         <div class="controls">
