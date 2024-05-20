@@ -1,35 +1,11 @@
-let waves = [];
 let currentLagerId = 0;
-
-document.querySelectorAll('.marker').forEach(marker => {
-    marker.addEventListener('click', function() {
-        document.getElementById('lager').value = this.dataset.lager;
-    });
-});
-
-function allowDrop(event) {
-    event.preventDefault();
-}
-
-function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
-}
-
-function drop(event) {
-    event.preventDefault();
-    const data = event.dataTransfer.getData("text");
-    const marker = document.getElementById(data);
-    const rect = event.target.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    marker.style.left = x + "px";
-    marker.style.top = y + "px";
-}
+let markers = [];
 
 function addMarker(event) {
     const rect = event.target.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
+
     const marker = document.createElement('div');
     marker.classList.add('marker');
     marker.style.left = x + 'px';
@@ -39,26 +15,30 @@ function addMarker(event) {
     marker.draggable = true;
     marker.ondragstart = drag;
     marker.onclick = function() {
-        document.getElementById('lager').value = marker.dataset.lager;
+        selectLager(marker.dataset.lager);
     };
     document.getElementById('map').appendChild(marker);
-    addLagerOption(`Lager ${currentLagerId}`);
+
+    addLagerInputs(currentLagerId, `Lager ${currentLagerId}`);
+
+    markers.push(marker);
     currentLagerId++;
 }
 
-function addLagerOption(lager) {
-    const option = document.createElement('option');
-    option.value = lager;
-    option.text = lager;
-    document.getElementById('lager').appendChild(option);
+function selectLager(lagerId) {
+    const selectedLager = document.getElementById(`lager${lagerId}`);
+    selectedLager.scrollIntoView({ behavior: 'smooth' });
 }
 
-function addWaveInputs() {
-    const lager = document.getElementById('lager').value;
-    const container = document.getElementById('waveInputsContainer');
+function addLagerInputs(lagerId, lagerName) {
+    const container = document.getElementById('lagerContainer');
 
-    const waveDiv = document.createElement('div');
-    waveDiv.classList.add('wave-inputs');
+    const lagerDiv = document.createElement('div');
+    lagerDiv.classList.add('wave-inputs');
+    lagerDiv.id = `lager${lagerId}`;
+
+    const lagerLabel = document.createElement('h4');
+    lagerLabel.textContent = lagerName;
 
     const generalSelect = document.createElement('select');
     generalSelect.classList.add('form-control');
@@ -86,31 +66,33 @@ function addWaveInputs() {
     wellenInput.classList.add('form-control');
     wellenInput.placeholder = 'Anzahl der Wellen';
 
-    waveDiv.innerHTML = `<h4>${lager}</h4>`;
-    waveDiv.appendChild(generalSelect);
-    waveDiv.appendChild(troopSelect);
-    waveDiv.appendChild(truppenInput);
-    waveDiv.appendChild(wellenInput);
+    const addWaveButton = document.createElement('button');
+    addWaveButton.classList.add('btn', 'btn-primary');
+    addWaveButton.innerHTML = '<i class="fas fa-plus"></i> Welle hinzufügen';
+    addWaveButton.onclick = function() {
+        addWave(lagerId, generalSelect.value, troopSelect.value, truppenInput.value, wellenInput.value);
+    };
 
-    container.appendChild(waveDiv);
+    lagerDiv.appendChild(lagerLabel);
+    lagerDiv.appendChild(generalSelect);
+    lagerDiv.appendChild(troopSelect);
+    lagerDiv.appendChild(truppenInput);
+    lagerDiv.appendChild(wellenInput);
+    lagerDiv.appendChild(addWaveButton);
+
+    container.appendChild(lagerDiv);
+}
+
+let waves = [];
+
+function addWave(lagerId, general, troop, truppen, wellen) {
+    waves.push({ lagerId, general, troop, truppen, wellen });
 }
 
 function generateCard() {
-    const container = document.getElementById('waveInputsContainer');
-    const waveInputs = container.getElementsByClassName('wave-inputs');
-    waves = [];
-    for (const waveInput of waveInputs) {
-        const lager = waveInput.getElementsByTagName('h4')[0].innerText;
-        const general = waveInput.getElementsByTagName('select')[0].value;
-        const truppen = waveInput.getElementsByTagName('input')[0].value;
-        const wellen = waveInput.getElementsByTagName('input')[1].value;
-        const troop = waveInput.getElementsByTagName('select')[1].value;
-        waves.push({ lager, general, truppen, wellen, troop });
-    }
-
     let output = '<h2>Generierte Taktikkarte</h2>';
     waves.forEach((wave, index) => {
-        output += `<p>Lager: ${wave.lager}, General: ${wave.general}, Truppen: ${wave.truppen}, Wellen: ${wave.wellen}, Truppe: ${wave.troop}</p>`;
+        output += `<p>Lager: ${wave.lagerId}, General: ${wave.general}, Truppen: ${wave.truppen}, Wellen: ${wave.wellen}, Truppe: ${wave.troop}</p>`;
     });
 
     document.getElementById('output').innerHTML = output;
@@ -123,4 +105,8 @@ function downloadCard() {
     element.download = 'taktikkarte.txt';
     document.body.appendChild(element);
     element.click();
+}
+
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
 }
