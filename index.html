@@ -9,11 +9,11 @@
 <body>
     <div class="container">
         <h1>Interaktive Taktikkarten-Bearbeitung</h1>
-        <div class="map" id="map">
+        <div class="map" id="map" ondrop="drop(event)" ondragover="allowDrop(event)">
             <img src="path/to/your/map.jpg" alt="Taktikkarte">
             <!-- Beispiel-Marker -->
-            <div class="marker" style="top: 50px; left: 100px;" data-lager="Lager 1"></div>
-            <div class="marker" style="top: 150px; left: 200px;" data-lager="Lager 2"></div>
+            <div class="marker" style="top: 50px; left: 100px;" data-lager="Lager 1" draggable="true" ondragstart="drag(event)" id="marker1"></div>
+            <div class="marker" style="top: 150px; left: 200px;" data-lager="Lager 2" draggable="true" ondragstart="drag(event)" id="marker2"></div>
             <!-- Weitere Marker hinzufügen -->
         </div>
         <div class="controls">
@@ -23,8 +23,10 @@
                 <!-- Weitere Lager hinzufügen -->
             </select>
             <input type="text" id="general" placeholder="General">
-            <input type="text" id="truppen" placeholder="Truppen">
-            <button onclick="saveData()">Speichern</button>
+            <input type="number" id="truppen" placeholder="Truppenanzahl">
+            <input type="number" id="wellen" placeholder="Anzahl der Wellen">
+            <button onclick="addWave()">Welle hinzufügen</button>
+            <button onclick="generateCard()">Karte generieren</button>
         </div>
         <div id="output"></div>
     </div>
