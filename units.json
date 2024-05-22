@@ -1,0 +1,74 @@
+{
+  "units": [
+    {
+      "type": "normal",
+      "name": "Rekrut"
+    },
+    {
+      "type": "normal",
+      "name": "Bogenschütze"
+    },
+    {
+      "type": "normal",
+      "name": "Miliz"
+    },
+        {
+      "type": "normal",
+      "name": "Reiter"
+    },
+    {
+      "type": "normal",
+      "name": "Langbogenschütze"
+    },
+    {
+      "type": "normal",
+      "name": "Soldat"
+    },
+        {
+      "type": "normal",
+      "name": "Armbrustschütze"
+    },
+
+    {
+      "type": "normal",
+      "name": "Elitesoldat"
+    },
+        {
+      "type": "normal",
+      "name": "Kanonier"
+    },
+
+    {
+      "type": "elite-einheiten",
+      "name": "Schwertkämpfer"
+    },
+        {
+      "type": "elite-einheiten",
+      "name": "Berittener Schwertkämpfer"
+    },
+
+            {
+      "type": "elite-einheiten",
+      "name": "Ritter"
+    },
+
+                {
+      "type": "elite-einheiten",
+      "name": "Scharfschütze"
+    },
+
+                    {
+      "type": "elite-einheiten",
+      "name": "Gepanzerter Scharfschütze"
+    },
+                        {
+      "type": "elite-einheiten",
+      "name": "Berittener Scharfschütze"
+    },
+                            {
+      "type": "elite-einheiten",
+      "name": "Belagerer"
+    }
+
+  ]
+}
