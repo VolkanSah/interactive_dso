@@ -67,39 +67,17 @@
 <body>
     <div class="container">
         <h1 class="text-center">Interaktive Taktikkarten-Bearbeitung</h1>
-        <div class="map" id="map" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="map" id="map" onclick="createMarker(event)">
             <img src="path/to/your/map.jpg" alt="Taktikkarte">
-            <div class="marker" style="top: 50px; left: 100px;" data-lager="Lager 1" draggable="true" ondragstart="drag(event)" id="marker1"></div>
-            <div class="marker" style="top: 150px; left: 200px;" data-lager="Lager 2" draggable="true" ondragstart="drag(event)" id="marker2"></div>
         </div>
-        <div class="controls">
-            <select id="lager" class="form-control">
-                <option value="Lager 1">Lager 1</option>
-                <option value="Lager 2">Lager 2</option>
-            </select>
-            <div class="general-icons">
-                <img src="path/to/general1.png" alt="General 1" onclick="selectGeneral('General 1')">
-                <img src="path/to/general2.png" alt="General 2" onclick="selectGeneral('General 2')">
-            </div>
-            <div class="troop-icons">
-                <img src="path/to/troop1.png" alt="Truppe 1" onclick="selectTroop('Truppe 1')">
-                <img src="path/to/troop2.png" alt="Truppe 2" onclick="selectTroop('Truppe 2')">
-            </div>
-            <input type="number" id="truppen" class="form-control" placeholder="Truppenanzahl">
-            <input type="number" id="wellen" class="form-control" placeholder="Anzahl der Wellen">
-            <button class="btn btn-primary" onclick="addWave()"><i class="fas fa-plus"></i> Welle hinzufügen</button>
-            <button class="btn btn-success" onclick="generateCard()"><i class="fas fa-map"></i> Karte generieren</button>
-            <button class="btn btn-info" onclick="downloadCard()"><i class="fas fa-download"></i> Karte herunterladen</button>
+        <div id="controls" class="controls">
+            <!-- Dynamische Inhalte werden hier eingefügt -->
         </div>
         <div id="output"></div>
     </div>
-    <script src="scripts.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/generals.js"></script>
-    <script src="scripts/units.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
