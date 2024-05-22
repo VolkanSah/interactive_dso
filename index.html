@@ -1,50 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive DSO</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" id="main-css" src="assets/styles/main.css">
-   <link rel="stylesheet" id="reset-css" src="assets/styles/reset.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive DSO</title>
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Interactive DSO</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container-fluid p-0">
-    <div class="row g-0">
-      <div class="col-12">
-        <div id="map-container">
-          <div id="map"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-  <script src="scripts/main.js"></script>
-  <script src="scripts/marker.js"></script>
-  <script src="scripts/attack_waves.js"></script>
-  <script src="scripts/generals.js"></script>
+    <header>
+        <h1>DSO Kartengenerator</h1>
+    </header>
+    <main>
+        <section id="generals-section">
+            <h2>Generäle</h2>
+            <div id="generals-container"></div>
+        </section>
+        <section id="units-section">
+            <h2>Einheiten</h2>
+            <div id="units-container"></div>
+        </section>
+    </main>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/generals.js"></script>
+    <script src="scripts/units.js"></script>
 </body>
 </html>
