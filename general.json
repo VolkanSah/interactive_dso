@@ -1,0 +1,304 @@
+{
+  "generals": [
+    {
+      "name": "Tavernengeneral",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Dracula",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Generalin Mary Christmas",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Verteidigungsmeister",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Kampfgestählter General",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "General Großhelm",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Sensenmanngeneral",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Feldsanitätergeneral",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Verrückter Wissenschaftler",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Vermummter General",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Nussknacker-General",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "Wundergeneralin",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 200,
+      "max_units": {
+        "plus_garnisionsanbau": [205, 210, 215]
+      }
+    },
+    {
+      "name": "General Klotz",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 220,
+      "max_units": {
+        "plus_garnisionsanbau": [225, 230, 235]
+      }
+    },
+    {
+      "name": "Veteran",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 250,
+      "max_units": {
+        "plus_garnisionsanbau": [255, 260, 265]
+      }
+    },
+    {
+      "name": "Generalmajor",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 270,
+      "max_units": {
+        "plus_garnisionsanbau": [275, 280, 285]
+      }
+    },
+    {
+      "name": "Meister der Kampfkunst",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 220,
+      "max_units": {
+        "plus_garnisionsanbau": [225, 230, 235]
+      }
+    },
+    {
+      "name": "Champion Vargus",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 180,
+      "max_units": {
+        "plus_garnisionsanbau": [185, 190, 195]
+      }
+    },
+    {
+      "name": "Champion Anslem",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 150,
+      "max_units": {
+        "plus_garnisionsanbau": [155, 160, 165]
+      }
+    },
+    {
+      "name": "Champion Nusala",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 165,
+      "max_units": {
+        "plus_garnisionsanbau": [170, 175, 180]
+      }
+    },
+    {
+      "name": "General Zitterbart",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 160,
+      "max_units": {
+        "plus_garnisionsanbau": [165, 170, 175]
+      }
+    },
+    {
+      "name": "General Boris",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 180,
+      "max_units": {
+        "plus_garnisionsanbau": [185, 190, 195]
+      }
+    },
+    {
+      "name": "Generalin Sylvana",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 180,
+      "max_units": {
+        "plus_garnisionsanbau": [185, 190, 195]
+      }
+    },
+    {
+      "name": "Älterer Zwillingsgeneral",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 280,
+      "max_units": {
+        "plus_garnisionsanbau": [285, 290, 295]
+      }
+    },
+    {
+      "name": "Jüngerer Zwillingsgeneral",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 140,
+      "max_units": {
+        "plus_garnisionsanbau": [145, 150, 155]
+      }
+    },
+    {
+      "name": "Standhafte Generalin",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 220,
+      "max_units": {
+        "plus_garnisionsanbau": [225, 230, 235]
+      }
+    },
+    {
+      "name": "Geister-Generalin",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 215,
+      "max_units": {
+        "plus_garnisionsanbau": [220, 225, 230]
+      }
+    },
+    {
+      "name": "Frostiger General",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 190,
+      "max_units": {
+        "plus_garnisionsanbau": [195, 200, 205]
+      }
+    },
+    {
+      "name": "Einsamer General",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 230,
+      "max_units": {
+        "plus_garnisionsanbau": [235, 240, 245]
+      }
+    },
+    {
+      "name": "Generalin Großmaul",
+      "skills": {
+        "garnisonsanbau": [5, 10, 15]
+      },
+      "basis_units": 170,
+      "max_units": {
+        "plus_garnisionsanbau": [175, 180, 185]
+      }
+    }
+  ],
+  "units": [
+    {
+      "type": "normal",
+      "name": "Rekrut"
+    },
+    {
+      "type": "elite",
+      "name": "Armbrustschütze"
+    }
+  ]
+}
