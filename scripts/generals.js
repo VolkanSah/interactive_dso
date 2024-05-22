@@ -1,4 +1,3 @@
-// generals.js
 document.addEventListener('DOMContentLoaded', () => {
     fetch('data/generals.json')
         .then(response => response.json())
