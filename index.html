@@ -3,24 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive DSO</title>
+    <title>Interaktive Taktikkarten-Bearbeitung</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .map {
+            position: relative;
+        }
+        .map img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .marker {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .controls input, .controls select, .controls button {
+            padding: 10px;
+            margin: 5px;
+            flex: 1;
+        }
+        .general-icons, .troop-icons {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .general-icons img, .troop-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>DSO Kartengenerator</h1>
-    </header>
-    <main>
-        <section id="generals-section">
-            <h2>Generäle</h2>
-            <div id="generals-container"></div>
-        </section>
-        <section id="units-section">
-            <h2>Einheiten</h2>
-            <div id="units-container"></div>
-        </section>
-    </main>
+    <div class="container">
+        <h1 class="text-center">Interaktive Taktikkarten-Bearbeitung</h1>
+        <div class="map" id="map" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="path/to/your/map.jpg" alt="Taktikkarte">
+            <div class="marker" style="top: 50px; left: 100px;" data-lager="Lager 1" draggable="true" ondragstart="drag(event)" id="marker1"></div>
+            <div class="marker" style="top: 150px; left: 200px;" data-lager="Lager 2" draggable="true" ondragstart="drag(event)" id="marker2"></div>
+        </div>
+        <div class="controls">
+            <select id="lager" class="form-control">
+                <option value="Lager 1">Lager 1</option>
+                <option value="Lager 2">Lager 2</option>
+            </select>
+            <div class="general-icons">
+                <img src="path/to/general1.png" alt="General 1" onclick="selectGeneral('General 1')">
+                <img src="path/to/general2.png" alt="General 2" onclick="selectGeneral('General 2')">
+            </div>
+            <div class="troop-icons">
+                <img src="path/to/troop1.png" alt="Truppe 1" onclick="selectTroop('Truppe 1')">
+                <img src="path/to/troop2.png" alt="Truppe 2" onclick="selectTroop('Truppe 2')">
+            </div>
+            <input type="number" id="truppen" class="form-control" placeholder="Truppenanzahl">
+            <input type="number" id="wellen" class="form-control" placeholder="Anzahl der Wellen">
+            <button class="btn btn-primary" onclick="addWave()"><i class="fas fa-plus"></i> Welle hinzufügen</button>
+            <button class="btn btn-success" onclick="generateCard()"><i class="fas fa-map"></i> Karte generieren</button>
+            <button class="btn btn-info" onclick="downloadCard()"><i class="fas fa-download"></i> Karte herunterladen</button>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script src="scripts.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/generals.js"></script>
     <script src="scripts/units.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
