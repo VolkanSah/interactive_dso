@@ -56,31 +56,46 @@
     },
     {
       "type": "elite-einheiten",
-      "name": "Schwertkämpfer"
+      "name": "Schwertkämpfer",
+      "short_name": "SK",
+      "unit_img": "assets/images/units/sk.png"
+      
     },
     {
       "type": "elite-einheiten",
-      "name": "Berittener Schwertkämpfer"
+      "name": "Berittener Schwertkämpfer",
+      "short_name": "BSK",
+      "unit_img": "assets/images/units/bsk.png"
     },
     {
       "type": "elite-einheiten",
-      "name": "Ritter"
+      "name": "Ritter",
+      "short_name": "RI",
+      "unit_img": "assets/images/units/ri.png"
     },
     {
       "type": "elite-einheiten",
-      "name": "Scharfschütze"
+      "name": "Scharfschütze",
+      "short_name": "SS",
+      "unit_img": "assets/images/units/ss.png"
     },
     {
       "type": "elite-einheiten",
-      "name": "Gepanzerter Scharfschütze"
+      "name": "Gepanzerter Scharfschütze",
+      "short_name": "GSS",
+      "unit_img": "assets/images/units/gss.png"
     },
     {
       "type": "elite-einheiten",
-      "name": "Berittener Scharfschütze"
+      "name": "Berittener Scharfschütze",
+      "short_name": "BSS",
+      "unit_img": "assets/images/units/bss.png"
     },
     {
       "type": "elite-einheiten",
-      "name": "Belagerer"
+      "name": "Belagerer",
+      "short_name": "BL",
+      "unit_img": "assets/images/units/bl.png"
     }
   ]
 }
