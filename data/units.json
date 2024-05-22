@@ -40,7 +40,7 @@
       "type": "normal",
       "name": "Armbrustschütze",
       "short_name": "AB",
-      "unit_img": "assets/images/units/lab.png"
+      "unit_img": "assets/images/units/ab.png"
     },
     {
       "type": "normal",
@@ -52,7 +52,7 @@
       "type": "normal",
       "name": "Kanonier",
       "short_name": "K",
-      "unit_img": "assets/images/units/lk.png"
+      "unit_img": "assets/images/units/k.png"
     },
     {
       "type": "elite-einheiten",
