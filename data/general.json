@@ -2,6 +2,7 @@
   "generals": [
     {
       "name": "Tavernengeneral",
+      "general_img": "assets/images/general/tavernen.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -12,6 +13,7 @@
     },
     {
       "name": "Dracula",
+      "general_img": "assets/images/general/dracula.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -22,6 +24,7 @@
     },
     {
       "name": "Generalin Mary Christmas",
+      "general_img": "assets/images/general/marry.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -32,6 +35,7 @@
     },
     {
       "name": "Verteidigungsmeister",
+      "general_img": "assets/images/general/vm.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -42,6 +46,7 @@
     },
     {
       "name": "Kampfgestählter General",
+      "general_img": "assets/images/general/kampfgestaehlter.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -52,6 +57,7 @@
     },
     {
       "name": "General Großhelm",
+      "general_img": "assets/images/general/grosshelm.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -62,6 +68,7 @@
     },
     {
       "name": "Sensenmanngeneral",
+      "general_img": "assets/images/general/tot.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -72,6 +79,7 @@
     },
     {
       "name": "Feldsanitätergeneral",
+      "general_img": "assets/images/general/feldsanitaet.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -82,6 +90,7 @@
     },
     {
       "name": "Verrückter Wissenschaftler",
+      "general_img": "assets/images/general/wissenschaftler.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -92,6 +101,7 @@
     },
     {
       "name": "Vermummter General",
+      "general_img": "assets/images/general/vermummter.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -102,6 +112,7 @@
     },
     {
       "name": "Nussknacker-General",
+      "general_img": "assets/images/general/nussknacker.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -112,6 +123,7 @@
     },
     {
       "name": "Wundergeneralin",
+      "general_img": "assets/images/general/Wundergeneralin.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -122,6 +134,7 @@
     },
     {
       "name": "General Klotz",
+      "general_img": "assets/images/general/klotz.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -132,6 +145,7 @@
     },
     {
       "name": "Veteran",
+      "general_img": "assets/images/general/veteran.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -142,6 +156,7 @@
     },
     {
       "name": "Generalmajor",
+      "general_img": "assets/images/general/generalmajor.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -152,6 +167,7 @@
     },
     {
       "name": "Meister der Kampfkunst",
+      "general_img": "assets/images/general/mdk.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -162,6 +178,7 @@
     },
     {
       "name": "Champion Vargus",
+      "general_img": "assets/images/general/vargus.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -172,6 +189,7 @@
     },
     {
       "name": "Champion Anslem",
+      "general_img": "assets/images/general/anslem.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -182,6 +200,7 @@
     },
     {
       "name": "Champion Nusala",
+      "general_img": "assets/images/general/nusala.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -192,6 +211,7 @@
     },
     {
       "name": "General Zitterbart",
+      "general_img": "assets/images/general/zitterbart.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -202,6 +222,7 @@
     },
     {
       "name": "General Boris",
+      "general_img": "assets/images/general/boris.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -212,6 +233,7 @@
     },
     {
       "name": "Generalin Sylvana",
+      "general_img": "assets/images/general/sylvana.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -222,6 +244,7 @@
     },
     {
       "name": "Älterer Zwillingsgeneral",
+      "general_img": "assets/images/general/zwillingsgeneral.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -232,6 +255,7 @@
     },
     {
       "name": "Jüngerer Zwillingsgeneral",
+      "general_img": "assets/images/general/jzg.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -242,6 +266,7 @@
     },
     {
       "name": "Standhafte Generalin",
+      "general_img": "assets/images/general/standhafte.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -252,6 +277,7 @@
     },
     {
       "name": "Geister-Generalin",
+      "general_img": "assets/images/general/geist.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -262,6 +288,7 @@
     },
     {
       "name": "Frostiger General",
+      "general_img": "assets/images/general/frostiger.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -272,6 +299,7 @@
     },
     {
       "name": "Einsamer General",
+      "general_img": "assets/images/general/einsamer.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -282,6 +310,7 @@
     },
     {
       "name": "Generalin Großmaul",
+      "general_img": "assets/images/general/grossmaul.png",
       "skills": {
         "garnisonsanbau": [5, 10, 15]
       },
@@ -291,14 +320,4 @@
       }
     }
   ],
-  "units": [
-    {
-      "type": "normal",
-      "name": "Rekrut"
-    },
-    {
-      "type": "elite",
-      "name": "Armbrustschütze"
-    }
-  ]
 }
