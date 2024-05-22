@@ -3,13 +3,15 @@ interactive_dso/
 ├── assets/
 │   ├── icons/
 │   ├── images/
+│       ├── general/
+│       └── units/
+│       └── maps/
 │   └── styles/
 │       ├── main.css
 │       └── reset.css
 ├── data/
 │   ├── generals.json
 │   ├── units.json
-│   └── skills.json
 ├── scripts/
 │   ├── main.js
 │   ├── marker.js
