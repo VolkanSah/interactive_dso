@@ -2,10 +2,10 @@
 interactive_dso/
 ├── assets/
 │   ├── icons/
+│   ├── maps/
 │   ├── images/
 │       ├── general/
 │       └── units/
-│       └── maps/
 │   └── styles/
 │       ├── main.css
 │       └── reset.css
