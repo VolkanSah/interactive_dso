@@ -2,39 +2,57 @@
   "units": [
     {
       "type": "normal",
-      "name": "Rekrut"
+      "name": "Rekrut",
+      "short_name": "R",
+      "unit_img": "assets/images/units/r.png"
     },
     {
       "type": "normal",
-      "name": "Bogenschütze"
+      "name": "Bogenschütze",
+      "short_name": "BO",
+      "unit_name": "assets/images/units/bo.png"
     },
     {
       "type": "normal",
-      "name": "Miliz"
+      "name": "Miliz",
+      "short_name": "M",
+      "unit_img": "assets/images/units/m.png"
     },
     {
       "type": "normal",
-      "name": "Reiter"
+      "name": "Reiter",
+      "short_name": "C",
+      "unit_img": "assets/images/units/c.png"
     },
     {
       "type": "normal",
-      "name": "Langbogenschütze"
+      "name": "Langbogenschütze",
+      "short_name": "LB",
+      "unit_img": "assets/images/units/lb.png"
     },
     {
       "type": "normal",
-      "name": "Soldat"
+      "name": "Soldat",
+      "short_name": "S",
+      "unit_img": "assets/images/units/s.png"
     },
     {
       "type": "normal",
-      "name": "Armbrustschütze"
+      "name": "Armbrustschütze",
+      "short_name": "AB",
+      "unit_img": "assets/images/units/lab.png"
     },
     {
       "type": "normal",
-      "name": "Elitesoldat"
+      "name": "Elitesoldat",
+      "short_name": "ES",
+      "unit_img": "assets/images/units/es.png"
     },
     {
       "type": "normal",
-      "name": "Kanonier"
+      "name": "Kanonier",
+      "short_name": "K",
+      "unit_img": "assets/images/units/lk.png"
     },
     {
       "type": "elite-einheiten",
