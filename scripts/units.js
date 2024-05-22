@@ -1,17 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('data/units.json')
-        .then(response => response.json())
-        .then(data => {
-            const unitsContainer = document.getElementById('units-container');
-            data.units.forEach(unit => {
-                const unitElement = document.createElement('div');
-                unitElement.classList.add('unit');
-                unitElement.innerHTML = `
-                    <img src="${unit.unit_img}" alt="${unit.name}">
-                    <h3>${unit.name}</h3>
-                `;
-                unitsContainer.appendChild(unitElement);
-            });
-        })
-        .catch(error => console.error('Error fetching units:', error));
-});
+fetch('data/generals.json')
+    .then(response => response.json())
+    .then(data => {
+        const generalIcons = document.getElementById('general-icons');
+        data.generals.forEach(general => {
+            const img = document.createElement('img');
+            img.src = general.general_img;
+            img.alt = general.name;
+            img.onclick = () => selectGeneral(general.name);
+            generalIcons.appendChild(img);
+        });
+    });
