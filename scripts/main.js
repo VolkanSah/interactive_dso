@@ -54,11 +54,86 @@ document.addEventListener('DOMContentLoaded', async function() {
         return select;
     }
 
-    // Testweise Generierung eines General-Dropdowns
-    const generalDropdown = createGeneralDropdown();
-    document.body.appendChild(generalDropdown);
+    // Funktion zum Hinzufügen von Markern
+    mapContainer.addEventListener('click', function(event) {
+        const x = event.offsetX;
+        const y = event.offsetY;
+        const id = lagerList.children.length + 1;
+        const marker = addMarker(mapContainer, x, y, id);
+        addLagerToList(id);
+    });
 
-    // Testweise Generierung eines Unit-Dropdowns
-    const unitDropdown = createUnitDropdown('normal');
-    document.body.appendChild(unitDropdown);
+    // Funktion zum Hinzufügen von Lagern zur Liste
+    function addLagerToList(id) {
+        const listItem = document.createElement('li');
+        listItem.className = 'list-group-item';
+        listItem.textContent = `Lager ${id}`;
+        lagerList.appendChild(listItem);
+
+        // Buttons für Wellen und Angriffe hinzufügen
+        const waveButton = document.createElement('button');
+        waveButton.className = 'btn btn-primary btn-sm ml-2';
+        waveButton.textContent = 'Wellen';
+        listItem.appendChild(waveButton);
+
+        waveButton.addEventListener('click', function() {
+            // Dropdown-Menüs für Generäle und Einheiten anzeigen
+            const generalDropdown = createGeneralDropdown();
+            listItem.appendChild(generalDropdown);
+
+            const unitDropdown = createUnitDropdown('normal');
+            listItem.appendChild(unitDropdown);
+        });
+    }
 });
+
+// Ladefunktionen für Generäle und Einheiten
+async function loadGenerals() {
+    const response = await fetch('data/generals.json');
+    const data = await response.json();
+    return data.generals;
+}
+
+async function loadUnits() {
+    const response = await fetch('data/units.json');
+    const data = await response.json();
+    return data.units;
+}
+
+// Marker-Funktion (aus marker.js)
+function addMarker(mapContainer, x, y, id) {
+    const marker = document.createElement('div');
+    marker.className = 'pointer';
+    marker.style.left = `${x}px`;
+    marker.style.top = `${y}px`;
+    marker.textContent = id;
+    mapContainer.appendChild(marker);
+
+    // Event Listener zum Verschieben des Markers
+    marker.addEventListener('mousedown', function(event) {
+        const shiftX = event.clientX - marker.getBoundingClientRect().left;
+        const shiftY = event.clientY - marker.getBoundingClientRect().top;
+
+        function moveAt(pageX, pageY) {
+            marker.style.left = pageX - shiftX + 'px';
+            marker.style.top = pageY - shiftY + 'px';
+        }
+
+        function onMouseMove(event) {
+            moveAt(event.pageX, event.pageY);
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        marker.onmouseup = function() {
+            document.removeEventListener('mousemove', onMouseMove);
+            marker.onmouseup = null;
+        };
+    });
+
+    marker.ondragstart = function() {
+        return false;
+    };
+
+    return marker;
+}
