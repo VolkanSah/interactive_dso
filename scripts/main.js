@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 const wave = addAttackWave(id, selectedGeneral, 'normal', [selectedUnit]);
                 console.log(wave);
                 // Hier kannst du die Welle zur Liste der Wellen hinzufügen und die UI entsprechend aktualisieren
+                // noch offen! !Important!
             });
         });
     }
