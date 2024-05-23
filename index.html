@@ -1,83 +1,67 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interaktive Taktikkarten-Bearbeitung</title>
+    <title>Interactive DSO Taktikkarten</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/main.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-        .map {
-            position: relative;
-        }
-        .map img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        .marker {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .controls {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .controls input, .controls select, .controls button {
-            padding: 10px;
-            margin: 5px;
-            flex: 1;
-        }
-        .general-icons, .troop-icons {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .general-icons img, .troop-icons img {
-            width: 50px;
-            height: 50px;
-            margin: 5px;
-            cursor: pointer;
-        }
-        #output {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center">Interaktive Taktikkarten-Bearbeitung</h1>
-        <div class="map" id="map" onclick="createMarker(event)">
-            <img src="path/to/your/map.jpg" alt="Taktikkarte">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">DSO Taktikkarten</a>
+    </nav>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Karte wählen</h1>
+                <select id="map-select" class="form-control">
+                    <!-- Kartenoptionen werden hier dynamisch geladen -->
+                </select>
+            </div>
         </div>
-        <div id="controls" class="controls">
-            <!-- Dynamische Inhalte werden hier eingefügt -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div id="map-container">
+                    <!-- Die Taktikkarte wird hier angezeigt -->
+                </div>
+            </div>
         </div>
-        <div id="output"></div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Lagerliste</h2>
+                <ul id="lager-list" class="list-group">
+                    <!-- Lager werden hier dynamisch hinzugefügt -->
+                </ul>
+            </div>
+        </div>
     </div>
-    <script src="scripts/main.js"></script>
+    <footer class="bg-light text-center mt-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">Link 1</a></li>
+                        <li><a href="#!" class="text-dark">Link 2</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">Link 3</a></li>
+                        <li><a href="#!" class="text-dark">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/marker.js"></script>
+    <script src="scripts/attack_waves.js"></script>
+    <script src="scripts/generals.js"></script>
 </body>
 </html>
