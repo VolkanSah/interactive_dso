@@ -77,6 +77,42 @@
 
     {"Abenteuer": "Alte Bekannte", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 1},
 
+    {"Abenteuer": "Alte Ruinen", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Beutelschneider", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 2},
+
+    {"Abenteuer": "Das Ende der Welt", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "das Bonaberti-Problem", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Das Räubernest", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Der gestohlene Schlitten", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Der Schamane", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Invasion der Nordmänner", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Der Überraschungsangriff", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 2},
+
+    {"Abenteuer": "Die dunkle Bruderschaft", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Die Insel der Freibeuter", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Die Nordmänner", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 2},
+
+    {"Abenteuer": "Die schwarzen Ritter", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Die wilde Waltraut", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Einsame Experimente", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Garrun der Fallensteller", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Mutterliebe", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 2},
+
+    
+
     
 
 ]
