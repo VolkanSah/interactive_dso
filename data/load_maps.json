@@ -135,7 +135,7 @@
     {"Abenteuer": "Viktor der Verschlagene", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 3},
 
     {"Abenteuer": "Kopfgeldjäger", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-        {"Abenteuer": "Hauptinsel", "Zuordnung": "Heimatinsel", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+    {"Abenteuer": "Hauptinsel", "Zuordnung": "Heimatinsel", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
 
     {"Abenteuer": "Archipel", "Zuordnung": "Heimatinsel", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
 
@@ -168,13 +168,35 @@
     {"Abenteuer": "Ali Baba und der Dritte Dieb", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
 
     {"Abenteuer": "Ali Baba und der Schatz der Weisheit", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
+   {"Abenteuer": "Ali Baba und der Schatz des Wissens", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 13, "Spieler-Min": 1, "Spieler-Max": 2},
 
-    
+    {"Abenteuer": "Aladin und die Öllampe", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 3},
 
-   
+    {"Abenteuer": "Aladin und die schöne Prinzessin", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 1},
 
-    
+    {"Abenteuer": "Sindbad und die Seeschlange", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 13, "Spieler-Min": 1, "Spieler-Max": 2},
 
-    
+    {"Abenteuer": "Sindbad und die belagerte Stadt", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 13, "Spieler-Min": 1, "Spieler-Max": 2},
+
+    {"Abenteuer": "Angriff der Nordmänner", "Zuordnung": "Andere Unternehmungen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Das dunkle Tor", "Zuordnung": "Andere Unternehmungen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Das Quartier des Drachen", "Zuordnung": "Andere Unternehmungen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Der Chupacabra", "Zuordnung": "Andere Unternehmungen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Die verlorene Stadt", "Zuordnung": "Andere Unternehmungen", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Drohende Gefahr", "Zuordnung": "Andere Unternehmungen", "Level": 0, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Einen Schritt voraus", "Zuordnung": "Andere Unternehmungen", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Monster aus dem Nebel", "Zuordnung": "Andere Unternehmungen", "Level": 0, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Von Liedern und Flüchen", "Zuordnung": "Andere Unternehmungen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Wertvolle Informationen", "Zuordnung": "Andere Unternehmungen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1}
 
 ]
+
