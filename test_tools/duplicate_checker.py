@@ -1,3 +1,4 @@
+# Dieser simple pythonscript überprüft ob du du Abenteuer doppelt eingetragen hast. 
 import json
 
 # Ersetze dies mit dem Inhalt deiner JSON-Datei aus der data/maps.json datei
