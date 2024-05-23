@@ -1,5 +1,5 @@
-[
-
+{
+  "abenteuer": [
     {
         "Abenteuer": "Der Kornzwist", 
         "Zuordnung": "Szenario", 
@@ -228,5 +228,5 @@
 
     {"Abenteuer": "Wertvolle Informationen", "Zuordnung": "Andere Unternehmungen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1}
 
-]
-
+],
+}
