@@ -135,6 +135,41 @@
     {"Abenteuer": "Viktor der Verschlagene", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 3},
 
     {"Abenteuer": "Kopfgeldjäger", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+        {"Abenteuer": "Hauptinsel", "Zuordnung": "Heimatinsel", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Archipel", "Zuordnung": "Heimatinsel", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Vom Fischer und seiner Frau", "Zuordnung": "Die Böse Königin", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Hänsel und Gretel", "Zuordnung": "Die Böse Königin", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Der Rattenfänger von Hameln", "Zuordnung": "Die Böse Königin", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Rotkäppchen", "Zuordnung": "Die Böse Königin", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Schneewittchen", "Zuordnung": "Die Böse Königin", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Am Fuße des Berges", "Zuordnung": "Der Bergclan", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Unbekannte Regionen", "Zuordnung": "Der Bergclan", "Level": 13, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Berglabyrinth", "Zuordnung": "Der Bergclan", "Level": 0, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Das Bergvolk", "Zuordnung": "Der Bergclan", "Level": 14, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Ein Riesenkampf", "Zuordnung": "Der Bergclan", "Level": 14, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Ali Baba, der junge Holzfäller", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Ali Baba und der erste Dieb", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Ali Baba und der zweite Dieb", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Ali Baba und der Dritte Dieb", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Ali Baba und der Schatz der Weisheit", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    
 
    
 
