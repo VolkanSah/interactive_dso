@@ -4,8 +4,15 @@ document.addEventListener('DOMContentLoaded', async function() {
     const mapContainer = document.getElementById('map-container');
     const lagerList = document.getElementById('lager-list');
 
-    // Karten im Ordner /assets/maps/ dynamisch laden
-    const maps = ['heimatinsel.png', 'rauberband.png']; // Diese Liste kann durch eine API oder eine JSON-Datei ersetzt werden
+    // Karten im Ordner /assets/maps/ dynamisch laden wird geändert!
+    const maps = ['heimatinsel.png', 'rauberband.png']; // Diese Liste kann durch eine API oder eine JSON-Datei ersetzt werden --->>>!important! ändern datei erstellt! 
+    // data/map_loader.json für Dateipfad der Taktikarten "at_loader_name" = name des Abenteuers  "at_img" url der Taktikarte (bild)
+    // data/maps.json für Abenteuer informationen        
+    // "Abenteuer": "Der Kornzwist", 
+   //     "Zuordnung": "Szenario", 
+     //   "Level": 1, 
+     //   "Spieler-Min": 1, 
+      //  "Spieler-Max": 1
     maps.forEach(map => {
         const option = document.createElement('option');
         option.value = map;
