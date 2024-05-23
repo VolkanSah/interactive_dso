@@ -110,6 +110,33 @@
     {"Abenteuer": "Garrun der Fallensteller", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 1},
 
     {"Abenteuer": "Mutterliebe", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 2},
+    {"Abenteuer": "Mehr einsame Experimente", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 2},
+
+    {"Abenteuer": "Nebelhafter Kuchen", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Räuberbande", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Rasender Bulle", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Rettet das Weihnachtsfest", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Rückkehr ins Räubernest", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Sattelfest", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Söhne der Steppe", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 2},
+
+    {"Abenteuer": "Schießpulver", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Sumpfhexe", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Verräter", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Viktor der Verschlagene", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Kopfgeldjäger", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+   
 
     
 
