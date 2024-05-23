@@ -1,14 +1,44 @@
 [
 
-    {"Abenteuer": "Der Kornzwist", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+    {
+        "Abenteuer": "Der Kornzwist", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
 
-    {"Abenteuer": "Schätze der Berge", "Zuordnung": "Szenario", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
+    {
+        "Abenteuer": "Schätze der Berge", 
+        "Zuordnung": "Szenario", 
+        "Level": 7, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
 
-    {"Abenteuer": "Die Karte des Narren", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+    {
+        "Abenteuer": "Die Karte des Narren", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
 
-    {"Abenteuer": "Eine neue Erfahrung", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+    {
+        "Abenteuer": "Eine neue Erfahrung", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
 
-    {"Abenteuer": "Held gesucht", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+    {
+        "Abenteuer": "Held gesucht", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
 
     {"Abenteuer": "Herz des Waldes", "Zuordnung": "Szenario", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
 
