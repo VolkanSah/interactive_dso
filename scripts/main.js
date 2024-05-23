@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', async function() {
     const mapContainer = document.getElementById('map-container');
     const lagerList = document.getElementById('lager-list');
 
-    const maps = ['Karte 1', 'Karte 2', 'Karte 3'];
+    // Karten im Ordner /assets/maps/ dynamisch laden
+    const maps = ['heimatinsel.png', 'rauberband.png']; // Diese Liste kann durch eine API oder eine JSON-Datei ersetzt werden
     maps.forEach(map => {
         const option = document.createElement('option');
         option.value = map;
-        option.textContent = map;
+        option.textContent = map.replace('.png', '').replace('_', ' ');
         mapSelect.appendChild(option);
     });
 
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     });
 
     async function loadMap(mapName) {
-        mapContainer.innerHTML = `<img src="assets/maps/${mapName}.jpg" alt="${mapName}">`;
+        mapContainer.innerHTML = `<img src="assets/maps/${mapName}" alt="${mapName}">`;
         lagerList.innerHTML = '';
     }
 
