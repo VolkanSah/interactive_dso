@@ -1,6 +1,6 @@
 import json
 
-# Ersetze dies mit dem Inhalt deiner JSON-Datei
+# Ersetze dies mit dem Inhalt deiner JSON-Datei aus der data/maps.json datei
 data = [
     # Dein JSON-Inhalt hier
 ]
