@@ -40,193 +40,771 @@
         "Spieler-Max": 1
     },
 
-    {"Abenteuer": "Herz des Waldes", "Zuordnung": "Szenario", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "nichts besonderes", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Retro Stil", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Sturmhilfe", "Zuordnung": "Szenario", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Woher kommen die Ostereier", "Zuordnung": "Szenario", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Zwillinge", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Übungsspiel", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Finale", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Halbfinale", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Viertelfinale", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Achtelfinale", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Das tapfere Schneiderlein", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Das kluge Schneiderlein", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Das heldenhafte Schneiderlein", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Die Söhne des Schneiderleins", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
-   {"Abenteuer": "Das betrogene Schneiderlein", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Arktische Explosion", "Zuordnung": "Mini-Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Der schlafende Vulkan", "Zuordnung": "Mini-Missionen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Der verschollene Schädel", "Zuordnung": "Mini-Missionen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Die schwarzen Priester", "Zuordnung": "Mini-Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 2},
-
-    {"Abenteuer": "Gefängnisinsel", "Zuordnung": "Mini-Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Piratenleben", "Zuordnung": "Mini-Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Schlummerndes Riff", "Zuordnung": "Mini-Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Tikki-Insel", "Zuordnung": "Mini-Missionen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Tropensonne", "Zuordnung": "Mini-Missionen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Die Belagerung", "Zuordnung": "Koop-Missionen", "Level": 4, "Spieler-Min": 2, "Spieler-Max": 2},
-
-    {"Abenteuer": "Die Freibeuter-Razzia", "Zuordnung": "Koop-Missionen", "Level": 3, "Spieler-Min": 3, "Spieler-Max": 3},
-
-    {"Abenteuer": "Geteilte Stadt im Herbst", "Zuordnung": "Koop-Missionen", "Level": 13, "Spieler-Min": 2, "Spieler-Max": 2},
-
-    {"Abenteuer": "Geteilte Stadt im Sommer", "Zuordnung": "Koop-Missionen", "Level": 9, "Spieler-Min": 2, "Spieler-Max": 2},
-
-    {"Abenteuer": "Grabräuber", "Zuordnung": "Koop-Missionen", "Level": 6, "Spieler-Min": 4, "Spieler-Max": 4},
-
-    {"Abenteuer": "Jagd auf die Jäger", "Zuordnung": "Koop-Missionen", "Level": 4, "Spieler-Min": 3, "Spieler-Max": 3},
-
-    {"Abenteuer": "Seeufer-Schatz", "Zuordnung": "Koop-Missionen", "Level": 5, "Spieler-Min": 2, "Spieler-Max": 2},
-
-    {"Abenteuer": "Der Wirbelwind", "Zuordnung": "Koop-Missionen", "Level": 6, "Spieler-Min": 4, "Spieler-Max": 4},
-
-    {"Abenteuer": "Alte Bekannte", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Alte Ruinen", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Beutelschneider", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 2},
-
-    {"Abenteuer": "Das Ende der Welt", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "das Bonaberti-Problem", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Das Räubernest", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Der gestohlene Schlitten", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Der Schamane", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Invasion der Nordmänner", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Der Überraschungsangriff", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 2},
-
-    {"Abenteuer": "Die dunkle Bruderschaft", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Die Insel der Freibeuter", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Die Nordmänner", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 2},
-
-    {"Abenteuer": "Die schwarzen Ritter", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Die wilde Waltraut", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Einsame Experimente", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Garrun der Fallensteller", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Mutterliebe", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 2},
-    {"Abenteuer": "Mehr einsame Experimente", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 2},
-
-    {"Abenteuer": "Nebelhafter Kuchen", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Räuberbande", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Rasender Bulle", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Rettet das Weihnachtsfest", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Rückkehr ins Räubernest", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Sattelfest", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Söhne der Steppe", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 2},
-
-    {"Abenteuer": "Schießpulver", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Sumpfhexe", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Verräter", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Viktor der Verschlagene", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Kopfgeldjäger", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-    {"Abenteuer": "Hauptinsel", "Zuordnung": "Heimatinsel", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Archipel", "Zuordnung": "Heimatinsel", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Vom Fischer und seiner Frau", "Zuordnung": "Die Böse Königin", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Hänsel und Gretel", "Zuordnung": "Die Böse Königin", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Der Rattenfänger von Hameln", "Zuordnung": "Die Böse Königin", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Rotkäppchen", "Zuordnung": "Die Böse Königin", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Schneewittchen", "Zuordnung": "Die Böse Königin", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Am Fuße des Berges", "Zuordnung": "Der Bergclan", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Unbekannte Regionen", "Zuordnung": "Der Bergclan", "Level": 13, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Berglabyrinth", "Zuordnung": "Der Bergclan", "Level": 0, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Das Bergvolk", "Zuordnung": "Der Bergclan", "Level": 14, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Ein Riesenkampf", "Zuordnung": "Der Bergclan", "Level": 14, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Ali Baba, der junge Holzfäller", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Ali Baba und der erste Dieb", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Ali Baba und der zweite Dieb", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Ali Baba und der Dritte Dieb", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Ali Baba und der Schatz der Weisheit", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
-   {"Abenteuer": "Ali Baba und der Schatz des Wissens", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 13, "Spieler-Min": 1, "Spieler-Max": 2},
-
-    {"Abenteuer": "Aladin und die Öllampe", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 3},
-
-    {"Abenteuer": "Aladin und die schöne Prinzessin", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Sindbad und die Seeschlange", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 13, "Spieler-Min": 1, "Spieler-Max": 2},
-
-    {"Abenteuer": "Sindbad und die belagerte Stadt", "Zuordnung": "Arabische Nächte / 1001 Nacht", "Level": 13, "Spieler-Min": 1, "Spieler-Max": 2},
-
-    {"Abenteuer": "Angriff der Nordmänner", "Zuordnung": "Andere Unternehmungen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Das dunkle Tor", "Zuordnung": "Andere Unternehmungen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Das Quartier des Drachen", "Zuordnung": "Andere Unternehmungen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Der Chupacabra", "Zuordnung": "Andere Unternehmungen", "Level": 8, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Die verlorene Stadt", "Zuordnung": "Andere Unternehmungen", "Level": 11, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Drohende Gefahr", "Zuordnung": "Andere Unternehmungen", "Level": 0, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Einen Schritt voraus", "Zuordnung": "Andere Unternehmungen", "Level": 12, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Monster aus dem Nebel", "Zuordnung": "Andere Unternehmungen", "Level": 0, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Von Liedern und Flüchen", "Zuordnung": "Andere Unternehmungen", "Level": 4, "Spieler-Min": 1, "Spieler-Max": 1},
-
-    {"Abenteuer": "Wertvolle Informationen", "Zuordnung": "Andere Unternehmungen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1}
-
-],
+    {
+        "Abenteuer": "Herz des Waldes", 
+        "Zuordnung": "Szenario", 
+        "Level": 3, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "nichts besonderes", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Retro Stil", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Sturmhilfe", 
+        "Zuordnung": "Szenario", 
+        "Level": 10, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Woher kommen die Ostereier", 
+        "Zuordnung": "Szenario", 
+        "Level": 3, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Zwillinge", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Übungsspiel", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Finale", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Halbfinale", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1},
+
+    {
+        "Abenteuer": "Viertelfinale", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Achtelfinale", 
+        "Zuordnung": "Szenario", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Das tapfere Schneiderlein", 
+        "Zuordnung": "Schneiderlein", 
+        "Level": 9, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Das kluge Schneiderlein", 
+        "Zuordnung": "Schneiderlein", 
+        "Level": 9, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Das heldenhafte Schneiderlein", 
+        "Zuordnung": "Schneiderlein", 
+        "Level": 9, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Die Söhne des Schneiderleins", 
+        "Zuordnung": "Schneiderlein", 
+        "Level": 9, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Das betrogene Schneiderlein", 
+        "Zuordnung": "Schneiderlein", 
+        "Level": 9, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Arktische Explosion", 
+        "Zuordnung": "Mini-Missionen", 
+        "Level": 6, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Der schlafende Vulkan", 
+        "Zuordnung": "Mini-Missionen", 
+        "Level": 2, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Der verschollene Schädel", 
+        "Zuordnung": "Mini-Missionen", 
+        "Level": 2, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Die schwarzen Priester", 
+        "Zuordnung": "Mini-Missionen", 
+        "Level": 3, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Gefängnisinsel", 
+        "Zuordnung": "Mini-Missionen", 
+        "Level": 6, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Piratenleben", 
+        "Zuordnung": "Mini-Missionen", 
+        "Level": 5, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Schlummerndes Riff", 
+        "Zuordnung": "Mini-Missionen", 
+        "Level": 3, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Tikki-Insel", 
+        "Zuordnung": "Mini-Missionen", 
+        "Level": 2, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Tropensonne", 
+        "Zuordnung": "Mini-Missionen", 
+        "Level": 2, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Die Belagerung", 
+        "Zuordnung": "Koop-Missionen", 
+        "Level": 4, 
+        "Spieler-Min": 2, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Die Freibeuter-Razzia", 
+        "Zuordnung": "Koop-Missionen", 
+        "Level": 3, 
+        "Spieler-Min": 3, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Geteilte Stadt im Herbst", 
+        "Zuordnung": "Koop-Missionen", 
+        "Level": 13, 
+        "Spieler-Min": 2, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Geteilte Stadt im Sommer", 
+        "Zuordnung": "Koop-Missionen", 
+        "Level": 9, 
+        "Spieler-Min": 2, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Grabräuber", 
+        "Zuordnung": "Koop-Missionen", 
+        "Level": 6, 
+        "Spieler-Min": 4, 
+        "Spieler-Max": 4
+    },
+
+    {
+        "Abenteuer": "Jagd auf die Jäger", 
+        "Zuordnung": "Koop-Missionen", 
+        "Level": 4, 
+        "Spieler-Min": 3, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Seeufer-Schatz", 
+        "Zuordnung": "Koop-Missionen", 
+        "Level": 5, 
+        "Spieler-Min": 2, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Der Wirbelwind", 
+        "Zuordnung": "Koop-Missionen", 
+        "Level": 6, 
+        "Spieler-Min": 4, 
+        "Spieler-Max": 4
+    },
+
+    {
+        "Abenteuer": "Alte Bekannte", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 5, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Alte Ruinen", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 6, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Beutelschneider", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 5, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Das Ende der Welt", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 8, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "das Bonaberti-Problem", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 11, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Das Räubernest", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 7, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Der gestohlene Schlitten", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 7, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Der Schamane", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 8, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Invasion der Nordmänner", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 9, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Der Überraschungsangriff", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 7, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+
+    },
+
+    {
+        "Abenteuer": "Die dunkle Bruderschaft", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 8, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Die Insel der Freibeuter", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Die Nordmänner", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 6, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Die schwarzen Ritter", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 5, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Die wilde Waltraut", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 8, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Einsame Experimente", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 9, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Garrun der Fallensteller", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 5, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Mutterliebe", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 3, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Mehr einsame Experimente", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 7, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Nebelhafter Kuchen", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 7, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Räuberbande", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 7, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Rasender Bulle", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 6, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Rettet das Weihnachtsfest", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 3, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Rückkehr ins Räubernest", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 4, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Sattelfest", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 4, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Söhne der Steppe", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 8, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Schießpulver", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 8, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Sumpfhexe", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 3, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Verräter", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 6, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Viktor der Verschlagene", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 7, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Kopfgeldjäger", 
+        "Zuordnung": "Klassische Missionen / Retro Missionen", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+    {
+        "Abenteuer": "Hauptinsel", 
+        "Zuordnung": "Heimatinsel", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1},
+
+    {
+        "Abenteuer": "Archipel", 
+        "Zuordnung": "Heimatinsel", 
+        "Level": 1, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Vom Fischer und seiner Frau", 
+        "Zuordnung": "Die Böse Königin", 
+        "Level": 11, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Hänsel und Gretel", 
+        "Zuordnung": "Die Böse Königin", 
+        "Level": 11, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Der Rattenfänger von Hameln", 
+        "Zuordnung": "Die Böse Königin", 
+        "Level": 11, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Rotkäppchen", 
+        "Zuordnung": "Die Böse Königin", 
+        "Level": 12, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Schneewittchen", 
+        "Zuordnung": "Die Böse Königin", 
+        "Level": 10, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Am Fuße des Berges", 
+        "Zuordnung": "Der Bergclan", 
+        "Level": 12,
+         "Spieler-Min": 1, 
+         "Spieler-Max": 1
+        },
+
+    {
+        "Abenteuer": "Unbekannte Regionen", 
+        "Zuordnung": "Der Bergclan", 
+        "Level": 13, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Berglabyrinth", 
+        "Zuordnung": "Der Bergclan", 
+        "Level": 0, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Das Bergvolk", 
+        "Zuordnung": "Der Bergclan", 
+        "Level": 14, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Ein Riesenkampf", 
+        "Zuordnung": "Der Bergclan", 
+        "Level": 14, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Ali Baba, der junge Holzfäller", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 10, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Ali Baba und der erste Dieb", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 10, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Ali Baba und der zweite Dieb", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 10, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Ali Baba und der Dritte Dieb", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 10, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Ali Baba und der Schatz der Weisheit", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 10, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+   
+    {
+        "Abenteuer": "Ali Baba und der Schatz des Wissens", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 13, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Aladin und die Öllampe", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 12, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 3
+    },
+
+    {
+        "Abenteuer": "Aladin und die schöne Prinzessin", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 12, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Sindbad und die Seeschlange", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 13, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Sindbad und die belagerte Stadt", 
+        "Zuordnung": "Arabische Nächte / 1001 Nacht", 
+        "Level": 13, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 2
+    },
+
+    {
+        "Abenteuer": "Angriff der Nordmänner", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 8, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Das dunkle Tor", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 4, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Das Quartier des Drachen", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 4, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Der Chupacabra", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 8, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Die verlorene Stadt", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 11, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Drohende Gefahr", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 0, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Einen Schritt voraus", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 12, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Monster aus dem Nebel", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 0, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Von Liedern und Flüchen", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 4, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    },
+
+    {
+        "Abenteuer": "Wertvolle Informationen", 
+        "Zuordnung": "Andere Unternehmungen", 
+        "Level": 2, 
+        "Spieler-Min": 1, 
+        "Spieler-Max": 1
+    }
+
+]
 }
