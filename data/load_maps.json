@@ -1,0 +1,82 @@
+[
+
+    {"Abenteuer": "Der Kornzwist", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Schätze der Berge", "Zuordnung": "Szenario", "Level": 7, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Die Karte des Narren", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Eine neue Erfahrung", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Held gesucht", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Herz des Waldes", "Zuordnung": "Szenario", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "nichts besonderes", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Retro Stil", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Sturmhilfe", "Zuordnung": "Szenario", "Level": 10, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Woher kommen die Ostereier", "Zuordnung": "Szenario", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Zwillinge", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Übungsspiel", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Finale", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Halbfinale", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Viertelfinale", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Achtelfinale", "Zuordnung": "Szenario", "Level": 1, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Das tapfere Schneiderlein", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Das kluge Schneiderlein", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Das heldenhafte Schneiderlein", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Die Söhne des Schneiderleins", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
+   {"Abenteuer": "Das betrogene Schneiderlein", "Zuordnung": "Schneiderlein", "Level": 9, "Spieler-Min": 1, "Spieler-Max": 3},
+
+    {"Abenteuer": "Arktische Explosion", "Zuordnung": "Mini-Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Der schlafende Vulkan", "Zuordnung": "Mini-Missionen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Der verschollene Schädel", "Zuordnung": "Mini-Missionen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Die schwarzen Priester", "Zuordnung": "Mini-Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 2},
+
+    {"Abenteuer": "Gefängnisinsel", "Zuordnung": "Mini-Missionen", "Level": 6, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Piratenleben", "Zuordnung": "Mini-Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Schlummerndes Riff", "Zuordnung": "Mini-Missionen", "Level": 3, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Tikki-Insel", "Zuordnung": "Mini-Missionen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Tropensonne", "Zuordnung": "Mini-Missionen", "Level": 2, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    {"Abenteuer": "Die Belagerung", "Zuordnung": "Koop-Missionen", "Level": 4, "Spieler-Min": 2, "Spieler-Max": 2},
+
+    {"Abenteuer": "Die Freibeuter-Razzia", "Zuordnung": "Koop-Missionen", "Level": 3, "Spieler-Min": 3, "Spieler-Max": 3},
+
+    {"Abenteuer": "Geteilte Stadt im Herbst", "Zuordnung": "Koop-Missionen", "Level": 13, "Spieler-Min": 2, "Spieler-Max": 2},
+
+    {"Abenteuer": "Geteilte Stadt im Sommer", "Zuordnung": "Koop-Missionen", "Level": 9, "Spieler-Min": 2, "Spieler-Max": 2},
+
+    {"Abenteuer": "Grabräuber", "Zuordnung": "Koop-Missionen", "Level": 6, "Spieler-Min": 4, "Spieler-Max": 4},
+
+    {"Abenteuer": "Jagd auf die Jäger", "Zuordnung": "Koop-Missionen", "Level": 4, "Spieler-Min": 3, "Spieler-Max": 3},
+
+    {"Abenteuer": "Seeufer-Schatz", "Zuordnung": "Koop-Missionen", "Level": 5, "Spieler-Min": 2, "Spieler-Max": 2},
+
+    {"Abenteuer": "Der Wirbelwind", "Zuordnung": "Koop-Missionen", "Level": 6, "Spieler-Min": 4, "Spieler-Max": 4},
+
+    {"Abenteuer": "Alte Bekannte", "Zuordnung": "Klassische Missionen / Retro Missionen", "Level": 5, "Spieler-Min": 1, "Spieler-Max": 1},
+
+    
+
+]
