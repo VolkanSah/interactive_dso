@@ -1,22 +1,14 @@
-// main.js
 document.addEventListener('DOMContentLoaded', async function() {
     const mapSelect = document.getElementById('map-select');
     const mapContainer = document.getElementById('map-container');
     const lagerList = document.getElementById('lager-list');
 
-    // Karten im Ordner /assets/maps/ dynamisch laden wird geändert!
-    const maps = ['heimatinsel.png', 'rauberband.png']; // Diese Liste kann durch eine API oder eine JSON-Datei ersetzt werden --->>>!important! ändern datei erstellt! 
-    // data/map_loader.json für Dateipfad der Taktikarten "at_loader_name" = name des Abenteuers  "at_img" url der Taktikarte (bild)
-    // data/maps.json für Abenteuer informationen        
-    // "Abenteuer": "Der Kornzwist", 
-   //     "Zuordnung": "Szenario", 
-     //   "Level": 1, 
-     //   "Spieler-Min": 1, 
-      //  "Spieler-Max": 1
+    // Karten aus map_loader.json laden
+    const maps = await loadMaps();
     maps.forEach(map => {
         const option = document.createElement('option');
-        option.value = map;
-        option.textContent = map.replace('.png', '').replace('_', ' ');
+        option.value = map.url;
+        option.textContent = map.name;
         mapSelect.appendChild(option);
     });
 
@@ -24,9 +16,15 @@ document.addEventListener('DOMContentLoaded', async function() {
         loadMap(this.value);
     });
 
-    async function loadMap(mapName) {
-        mapContainer.innerHTML = `<img src="assets/maps/${mapName}" alt="${mapName}">`;
+    async function loadMap(mapUrl) {
+        mapContainer.innerHTML = `<img src="${mapUrl}" alt="Karte">`;
         lagerList.innerHTML = '';
+    }
+
+    async function loadMaps() {
+        const response = await fetch('data/map_loader.json');
+        const data = await response.json();
+        return data.maps;
     }
 
     const generals = await loadGenerals();
@@ -82,6 +80,9 @@ document.addEventListener('DOMContentLoaded', async function() {
             const unitDropdown = createUnitDropdown('normal');
             listItem.appendChild(unitDropdown);
 
+            const garnisonDropdown = createGarnisonDropdown(generalDropdown.value);
+            listItem.appendChild(garnisonDropdown);
+
             const addWaveButton = document.createElement('button');
             addWaveButton.className = 'btn btn-success btn-sm ml-2';
             addWaveButton.textContent = 'Welle hinzufügen';
@@ -90,12 +91,27 @@ document.addEventListener('DOMContentLoaded', async function() {
             addWaveButton.addEventListener('click', function() {
                 const selectedGeneral = generalDropdown.value;
                 const selectedUnit = unitDropdown.value;
-                const wave = addAttackWave(id, selectedGeneral, 'normal', [selectedUnit]);
+                const selectedGarnison = garnisonDropdown.value;
+                const wave = addAttackWave(id, selectedGeneral, selectedGarnison, 'normal', [selectedUnit]);
                 console.log(wave);
                 // Hier kannst du die Welle zur Liste der Wellen hinzufügen und die UI entsprechend aktualisieren
-                // noch offen! !Important!
             });
         });
+    }
+
+    function createGarnisonDropdown(generalName) {
+        const select = document.createElement('select');
+        select.className = 'form-control';
+        const general = generals.find(g => g.name === generalName);
+        if (general && general.skills.garnisonsanbau) {
+            general.skills.garnisonsanbau.forEach(value => {
+                const option = document.createElement('option');
+                option.value = value;
+                option.textContent = `Garnisonsanbau +${value}`;
+                select.appendChild(option);
+            });
+        }
+        return select;
     }
 });
 
@@ -148,10 +164,11 @@ function addMarker(mapContainer, x, y, id) {
 }
 
 // attack_waves.js
-function addAttackWave(lagerId, generalName, unitType, units) {
+function addAttackWave(lagerId, generalName, garnison, unitType, units) {
     const wave = {
         lagerId: lagerId,
         general: generalName,
+        garnison: garnison,
         unitType: unitType,
         units: units
     };
