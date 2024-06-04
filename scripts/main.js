@@ -57,12 +57,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Initialisieren
     await populateMapSelector();
 
-    // Bestehende Funktionen und Kommentare bleiben hier erhalten
-    const generalSelector = document.createElement('select');
-    const unitSelector = document.createElement('select');
-    document.body.appendChild(generalSelector); // Dies sollte später korrekt platziert werden
-    document.body.appendChild(unitSelector); // Dies sollte später korrekt platziert werden
-
     // Generäle laden
     async function loadGenerals() {
         const response = await fetch('data/generals.json');
@@ -78,7 +72,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     // Dropdown mit Generälen füllen
-    async function populateGeneralSelector() {
+    async function populateGeneralSelector(selectorId) {
+        const generalSelector = document.getElementById(selectorId);
         const generals = await loadGenerals();
         generals.forEach(general => {
             const option = document.createElement('option');
@@ -88,20 +83,32 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     }
 
-    // Dropdown mit Einheiten füllen
-    async function populateUnitSelector() {
+    // Einheiten basierend auf Einheitstyp laden
+    async function populateUnitInputs(lagerId, type) {
+        const unitsContainer = document.getElementById(`units-container-${lagerId}`);
+        unitsContainer.innerHTML = ''; // Reset units container
         const units = await loadUnits();
-        units.forEach(unit => {
-            const option = document.createElement('option');
-            option.value = unit.name;
-            option.textContent = unit.name;
-            unitSelector.appendChild(option);
+        const filteredUnits = units.filter(unit => unit.type === type);
+
+        filteredUnits.forEach(unit => {
+            const unitDiv = document.createElement('div');
+            unitDiv.innerHTML = `
+                <img src="${unit.unit_img}" alt="${unit.name}" style="width: 30px; height: 30px;">
+                <input type="number" name="unit_${unit.name}" placeholder="Anzahl ${unit.name}" step="1" min="0" max="200" required>
+            `;
+            unitsContainer.appendChild(unitDiv);
         });
     }
+    
+    // Bestehende Funktionen und Kommentare bleiben hier erhalten
+    const generalSelector = document.createElement('select');
+    const unitSelector = document.createElement('select');
+    document.body.appendChild(generalSelector); // Dies sollte später korrekt platziert werden
+    document.body.appendChild(unitSelector); // Dies sollte später korrekt platziert werden
 
     // Initialisieren
-    await populateGeneralSelector();
-    await populateUnitSelector();
+    await populateGeneralSelector(generalSelector.id);
+    await populateUnitInputs(unitSelector.id, 'normal');
 
     // Angriffswellen hinzufügen
     const attackWaveContainer = document.createElement('div');
