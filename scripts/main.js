@@ -1,4 +1,3 @@
-// scripts/main.js
 document.addEventListener('DOMContentLoaded', async function() {
     const mapSelector = document.getElementById('map-selector');
     const mainMap = document.getElementById('main-map');
