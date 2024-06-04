@@ -45,12 +45,36 @@ document.addEventListener('DOMContentLoaded', function() {
     function addLagerToList(id) {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item';
-        listItem.textContent = `Lager ${id}`;
+        listItem.innerHTML = `
+            <div>
+                Lager ${id}
+                <input type="number" name="wellen_anzahl" placeholder="0" step="1" value="1" min="0" max="25" required>
+                <select name="general_type_select" id="general-type-select-${id}">
+                    <option value="">General wählen</option>
+                </select>
+                <input type="number" name="skill_garnisonsanbau" placeholder="0" step="5" min="0" max="15" required>
+                <input type="color" name="general_color" value="#ff0000">
+                <select name="units_type_select" id="units-type-select-${id}">
+                    <option value="">Einheitstype</option>
+                    <option value="normal">Kaserne</option>
+                    <option value="elite-einheiten">Elite</option>
+                </select>
+                <div id="units-container-${id}"></div>
+            </div>
+        `;
         lagerList.appendChild(listItem);
+
+        // Dynamisch Generäle laden
+        populateGeneralSelector(`general-type-select-${id}`);
+        // Einheitentyp-Event-Listener hinzufügen
+        document.getElementById(`units-type-select-${id}`).addEventListener('change', function(event) {
+            const selectedType = event.target.value;
+            populateUnitInputs(id, selectedType);
+        });
     }
 
     function removeLagerFromList(id) {
-        const listItem = Array.from(lagerList.children).find(item => item.textContent === `Lager ${id}`);
+        const listItem = Array.from(lagerList.children).find(item => item.textContent.includes(`Lager ${id}`));
         if (listItem) {
             listItem.remove();
         }
