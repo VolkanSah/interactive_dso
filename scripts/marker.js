@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mapContainer = document.getElementById('map-container');
+    const mainMap = document.getElementById('main-map');
     const lagerList = document.getElementById('lager-list');
     let markerId = 0;
 
     mapContainer.addEventListener('click', function(event) {
-        if (event.target !== mapContainer) return; // Verhindert das Setzen eines Markers auf einem bestehenden Marker
-        const x = event.offsetX;
-        const y = event.offsetY;
+        if (event.target !== mainMap) return; // Verhindert das Setzen eines Markers auf einem bestehenden Marker
+        const rect = mainMap.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
         markerId++;
         const marker = createMarker(x, y, markerId);
         mapContainer.appendChild(marker);
@@ -15,18 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function createMarker(x, y, id) {
         const marker = document.createElement('div');
-        marker.className = 'pointer';  // Verwendung der vorhandenen Klasse
-        marker.style.left = `${x}px`;
-        marker.style.top = `${y}px`;
-        marker.style.width = '100px';   // Größe anpassen
-        marker.style.height = '100px';  // Größe anpassen
+        marker.className = 'pointer';
+        marker.style.left = `${x - 15}px`;  // Korrektur für die Mitte des Markers
+        marker.style.top = `${y - 15}px`;   // Korrektur für die Mitte des Markers
+        marker.style.width = '30px';   // Größe anpassen
+        marker.style.height = '30px';  // Größe anpassen
         marker.textContent = id;
         marker.draggable = true;
 
         marker.addEventListener('dragend', function(event) {
             const mapRect = mapContainer.getBoundingClientRect();
-            const newX = event.clientX - mapRect.left;
-            const newY = event.clientY - mapRect.top;
+            const newX = event.clientX - mapRect.left - marker.offsetWidth / 2;
+            const newY = event.clientY - mapRect.top - marker.offsetHeight / 2;
             marker.style.left = `${newX}px`;
             marker.style.top = `${newY}px`;
         });
@@ -42,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function addLagerToList(id) {
         const listItem = document.createElement('li');
-        listItem.className = 'list-group-item';  // Verwendung der vorhandenen Klasse
+        listItem.className = 'list-group-item';
         listItem.textContent = `Lager ${id}`;
         lagerList.appendChild(listItem);
     }
