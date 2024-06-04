@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     mapContainer.addEventListener('click', function(event) {
         if (event.target !== mainMap) return; // Verhindert das Setzen eines Markers auf einem bestehenden Marker
+        event.stopPropagation(); // Verhindert Event-Bubbling
         const rect = mainMap.getBoundingClientRect();
         const x = ((event.clientX - rect.left) / rect.width) * 100;
         const y = ((event.clientY - rect.top) / rect.height) * 100;
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         marker.draggable = true;
 
         marker.addEventListener('dragend', function(event) {
+            event.stopPropagation(); // Verhindert Event-Bubbling
             const mapRect = mapContainer.getBoundingClientRect();
             const newX = ((event.clientX - mapRect.left) / mapRect.width) * 100;
             const newY = ((event.clientY - mapRect.top) / mapRect.height) * 100;
