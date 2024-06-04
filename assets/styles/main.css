@@ -12,6 +12,71 @@
     height: auto;
 }
 
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 1em;
+}
+
+#map-container {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+#main-map {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#map-details {
+    margin-bottom: 1em;
+}
+
+label, select {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+}
+
+.wave-container {
+    margin-bottom: 1em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+/*  Marker */
 .pointer {
     position: absolute;
     background: darkred;
@@ -26,6 +91,7 @@
     font-weight: bold;
     font-size: 1.2em;
 }
+
 
 
 .list-group-item {
