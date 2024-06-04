@@ -1,14 +1,14 @@
 /* main.css */
 #map-container {
     position: relative;
-    width: 100%;
+    width: 90%;
     height: auto;
     border: 1px solid #ddd;
     margin-bottom: 20px;
 }
 
 #map-container img {
-    width: 80%;
+    width: 85%;
     height: auto;
 }
 
