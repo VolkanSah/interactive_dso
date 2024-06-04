@@ -1,3 +1,5 @@
+// marker.js
+// Copyright Volkan Kücükbudak! Not for Public use! 
 document.addEventListener('DOMContentLoaded', function() {
     const mapContainer = document.getElementById('map-container');
     const mainMap = document.getElementById('main-map');
