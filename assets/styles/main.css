@@ -31,17 +31,7 @@ main {
     padding: 1em;
 }
 
-#map-container {
-    position: relative;
-    margin-bottom: 1em;
-}
 
-#main-map {
-    width: 100%;
-    max-width: 800px;
-    display: block;
-    margin: 0 auto;
-}
 
 
 #map-details {
