@@ -1,176 +1,300 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    const mapSelect = document.getElementById('map-select');
-    const mapContainer = document.getElementById('map-container');
-    const lagerList = document.getElementById('lager-list');
+    const mapSelector = document.getElementById('map-selector');
+    const mainMap = document.getElementById('main-map');
+    const adventureType = document.getElementById('adventure-type');
+    const adventureLevel = document.getElementById('adventure-level');
+    const adventurePlayers = document.getElementById('adventure-players');
 
-    // Karten aus map_loader.json laden
-    const maps = await loadMaps();
-    maps.forEach(map => {
-        const option = document.createElement('option');
-        option.value = map.url;
-        option.textContent = map.name;
-        mapSelect.appendChild(option);
-    });
-
-    mapSelect.addEventListener('change', function() {
-        loadMap(this.value);
-    });
-
-    async function loadMap(mapUrl) {
-        mapContainer.innerHTML = `<img src="${mapUrl}" alt="Karte">`;
-        lagerList.innerHTML = '';
-    }
-
+    // Karten laden
     async function loadMaps() {
         const response = await fetch('data/map_loader.json');
         const data = await response.json();
-        return data.maps;
+        return data.map_loader;
     }
 
-    const generals = await loadGenerals();
-    const units = await loadUnits();
+    // Abenteuerdetails laden
+    async function loadAdventureDetails() {
+        const response = await fetch('data/maps.json');
+        const data = await response.json();
+        return data.abenteuer;
+    }
 
-    function createGeneralDropdown() {
-        const select = document.createElement('select');
-        select.className = 'form-control';
-        generals.forEach(general => {
+    // Dropdown mit Karten füllen
+    async function populateMapSelector() {
+        const maps = await loadMaps();
+        maps.forEach(map => {
             const option = document.createElement('option');
-            option.value = general.name;
-            option.textContent = general.name;
-            select.appendChild(option);
+            option.value = map.at_img;
+            option.textContent = map.at_loader_name;
+            mapSelector.appendChild(option);
         });
-        return select;
     }
 
-    function createUnitDropdown(type) {
-        const select = document.createElement('select');
-        select.className = 'form-control';
-        units.filter(unit => unit.type === type).forEach(unit => {
-            const option = document.createElement('option');
-            option.value = unit.name;
-            option.textContent = unit.name;
-            select.appendChild(option);
-        });
-        return select;
+    // Abenteuerdetails anzeigen
+    async function showAdventureDetails(selectedMap) {
+        const adventures = await loadAdventureDetails();
+        const adventure = adventures.find(a => a.Abenteuer === selectedMap);
+
+        if (adventure) {
+            adventureType.textContent = `Zuordnung: ${adventure.Zuordnung}`;
+            adventureLevel.textContent = `Level: ${adventure.Level}`;
+            adventurePlayers.textContent = `Spieler: ${adventure['Spieler-Min']} - ${adventure['Spieler-Max']}`;
+        } else {
+            adventureType.textContent = '';
+            adventureLevel.textContent = '';
+            adventurePlayers.textContent = '';
+        }
     }
+
+    // Karte und Details aktualisieren
+    mapSelector.addEventListener('change', function() {
+        const selectedMap = mapSelector.options[mapSelector.selectedIndex].text;
+        const imgSrc = mapSelector.value;
+        mainMap.src = imgSrc;
+        showAdventureDetails(selectedMap);
+    });
+
+    // Initialisieren
+    await populateMapSelector();
+
+    // Marker Initialisierung
+    const mapContainer = document.getElementById('map-container');
+    const lagerList = document.getElementById('lager-list');
+    let markerId = 0;
 
     mapContainer.addEventListener('click', function(event) {
+        if (event.target.tagName !== 'IMG') return; // Verhindert das Setzen eines Markers auf einem bestehenden Marker
         const x = event.offsetX;
         const y = event.offsetY;
-        const id = lagerList.children.length + 1;
-        const marker = addMarker(mapContainer, x, y, id);
-        addLagerToList(id);
+        markerId++;
+        const marker = createMarker(x, y, markerId);
+        mapContainer.appendChild(marker);
+        addLagerToList(markerId);
     });
+
+    function createMarker(x, y, id) {
+        const marker = document.createElement('div');
+        marker.className = 'pointer';
+        marker.style.left = `${x}px`;
+        marker.style.top = `${y}px`;
+        marker.textContent = id;
+        marker.draggable = true;
+
+        marker.addEventListener('dragend', function(event) {
+            const mapRect = mapContainer.getBoundingClientRect();
+            const newX = event.clientX - mapRect.left;
+            const newY = event.clientY - mapRect.top;
+            marker.style.left = `${newX}px`;
+            marker.style.top = `${newY}px`;
+        });
+
+        marker.addEventListener('dblclick', function() {
+            marker.remove();
+            removeLagerFromList(id);
+            updateMarkerIds();
+        });
+
+        return marker;
+    }
 
     function addLagerToList(id) {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item';
         listItem.textContent = `Lager ${id}`;
         lagerList.appendChild(listItem);
+    }
 
-        const waveButton = document.createElement('button');
-        waveButton.className = 'btn btn-primary btn-sm ml-2';
-        waveButton.textContent = 'Wellen';
-        listItem.appendChild(waveButton);
+    function removeLagerFromList(id) {
+        const listItem = Array.from(lagerList.children).find(item => item.textContent === `Lager ${id}`);
+        if (listItem) {
+            listItem.remove();
+        }
+    }
 
-        waveButton.addEventListener('click', function() {
-            const generalDropdown = createGeneralDropdown();
-            listItem.appendChild(generalDropdown);
+    function updateMarkerIds() {
+        markerId = 0;
+        Array.from(mapContainer.children).forEach(marker => {
+            if (marker.className === 'pointer') {
+                markerId++;
+                marker.textContent = markerId;
+            }
+        });
+        updateLagerList();
+    }
 
-            const unitDropdown = createUnitDropdown('normal');
-            listItem.appendChild(unitDropdown);
+    function updateLagerList() {
+        lagerList.innerHTML = '';
+        for (let i = 1; i <= markerId; i++) {
+            addLagerToList(i);
+        }
+    }
 
-            const garnisonDropdown = createGarnisonDropdown(generalDropdown.value);
-            listItem.appendChild(garnisonDropdown);
+    // Bestehende Funktionen und Kommentare bleiben hier erhalten
+    const generalSelector = document.createElement('select');
+    const unitSelector = document.createElement('select');
+    document.body.appendChild(generalSelector); // Dies sollte später korrekt platziert werden
+    document.body.appendChild(unitSelector); // Dies sollte später korrekt platziert werden
 
-            const addWaveButton = document.createElement('button');
-            addWaveButton.className = 'btn btn-success btn-sm ml-2';
-            addWaveButton.textContent = 'Welle hinzufügen';
-            listItem.appendChild(addWaveButton);
+    // Generäle laden
+    async function loadGenerals() {
+        const response = await fetch('data/generals.json');
+        const data = await response.json();
+        return data.generals;
+    }
 
-            addWaveButton.addEventListener('click', function() {
-                const selectedGeneral = generalDropdown.value;
-                const selectedUnit = unitDropdown.value;
-                const selectedGarnison = garnisonDropdown.value;
-                const wave = addAttackWave(id, selectedGeneral, selectedGarnison, 'normal', [selectedUnit]);
-                console.log(wave);
-                // Hier kannst du die Welle zur Liste der Wellen hinzufügen und die UI entsprechend aktualisieren
-            });
+    // Einheiten laden
+    async function loadUnits() {
+        const response = await fetch('data/units.json');
+        const data = await response.json();
+        return data.units;
+    }
+
+    // Dropdown mit Generälen füllen
+    async function populateGeneralSelector() {
+        const generals = await loadGenerals();
+        generals.forEach(general => {
+            const option = document.createElement('option');
+            option.value = general.name;
+            option.textContent = general.name;
+            generalSelector.appendChild(option);
         });
     }
 
-    function createGarnisonDropdown(generalName) {
-        const select = document.createElement('select');
-        select.className = 'form-control';
-        const general = generals.find(g => g.name === generalName);
-        if (general && general.skills.garnisonsanbau) {
-            general.skills.garnisonsanbau.forEach(value => {
-                const option = document.createElement('option');
-                option.value = value;
-                option.textContent = `Garnisonsanbau +${value}`;
-                select.appendChild(option);
-            });
-        }
-        return select;
+    // Dropdown mit Einheiten füllen
+    async function populateUnitSelector() {
+        const units = await loadUnits();
+        units.forEach(unit => {
+            const option = document.createElement('option');
+            option.value = unit.name;
+            option.textContent = unit.name;
+            unitSelector.appendChild(option);
+        });
     }
-});
 
-async function loadGenerals() {
-    const response = await fetch('data/generals.json');
-    const data = await response.json();
-    return data.generals;
-}
+    // Initialisieren
+    await populateGeneralSelector();
+    await populateUnitSelector();
 
-async function loadUnits() {
-    const response = await fetch('data/units.json');
-    const data = await response.json();
-    return data.units;
-}
+    // Angriffswellen hinzufügen
+    const attackWaveContainer = document.createElement('div');
+    document.body.appendChild(attackWaveContainer); // Dies sollte später korrekt platziert werden
 
-function addMarker(mapContainer, x, y, id) {
-    const marker = document.createElement('div');
-    marker.className = 'pointer';
-    marker.style.left = `${x}px`;
-    marker.style.top = `${y}px`;
-    marker.textContent = id;
-    mapContainer.appendChild(marker);
+    function addAttackWave(lagerId) {
+        const waveContainer = document.createElement('div');
+        waveContainer.className = 'wave-container';
 
-    marker.addEventListener('mousedown', function(event) {
-        const shiftX = event.clientX - marker.getBoundingClientRect().left;
-        const shiftY = event.clientY - marker.getBoundingClientRect().top;
+        const generalDropdown = document.createElement('select');
+        generalDropdown.className = 'general-selector';
 
-        function moveAt(pageX, pageY) {
-            marker.style.left = pageX - shiftX + 'px';
-            marker.style.top = pageY - shiftY + 'px';
-        }
+        const unitDropdown = document.createElement('select');
+        unitDropdown.className = 'unit-selector';
 
-        function onMouseMove(event) {
-            moveAt(event.pageX, event.pageY);
-        }
+        loadGenerals().then(generals => {
+            generals.forEach(general => {
+                const option = document.createElement('option');
+                option.value = general.name;
+                option.textContent = general.name;
+                generalDropdown.appendChild(option);
+            });
+        });
 
-        document.addEventListener('mousemove', onMouseMove);
+        loadUnits().then(units => {
+            units.forEach(unit => {
+                const option = document.createElement('option');
+                option.value = unit.name;
+                option.textContent = unit.name;
+                unitDropdown.appendChild(option);
+            });
+        });
 
-        marker.onmouseup = function() {
-            document.removeEventListener('mousemove', onMouseMove);
-            marker.onmouseup = null;
+        waveContainer.appendChild(generalDropdown);
+        waveContainer.appendChild(unitDropdown);
+
+        const unitsInput = document.createElement('input');
+        unitsInput.type = 'number';
+        unitsInput.min = 0;
+        unitsInput.placeholder = 'Anzahl der Einheiten';
+        waveContainer.appendChild(unitsInput);
+
+        attackWaveContainer.appendChild(waveContainer);
+
+        return {
+            lagerId: lagerId,
+            general: generalDropdown.value,
+            unitType: unitDropdown.value,
+            units: unitsInput.value
         };
+    }
+
+    document.getElementById('add-wave-button').addEventListener('click', function() {
+        const selectedLager = document.getElementById('lager-list').selectedIndex + 1;
+        addAttackWave(selectedLager);
     });
 
-    marker.ondragstart = function() {
-        return false;
-    };
+    // Karte generieren und herunterladen
+    async function generateAndDownloadMap() {
+        const selectedMap = mapSelector.options[mapSelector.selectedIndex].text;
+        const imgSrc = mapSelector.value;
+        const adventureDetails = {
+            type: adventureType.textContent,
+            level: adventureLevel.textContent,
+            players: adventurePlayers.textContent
+        };
+        
+        const attackWaves = Array.from(document.querySelectorAll('.wave-container')).map((wave, index) => {
+            const general = wave.querySelector('.general-selector').value;
+            const unitType = wave.querySelector('.unit-selector').value;
+            const units = wave.querySelector('input[type="number"]').value;
+            return {
+                lagerId: index + 1,
+                general: general,
+                unitType: unitType,
+                units: units
+            };
+        });
 
-    return marker;
-}
+        const mapHtml = `
+            <!DOCTYPE html>
+            <html lang="de">
+            <head>
+                <meta charset="UTF-8">
+                <title>Generierte Taktikarte</title>
+                <style>
+                    body { font-family: Arial, sans-serif; }
+                    .map-container { position: relative; }
+                    .map-container img { width: 100%; }
+                    .pointer { position: absolute; background: red; color: white; border-radius: 50%; padding: 5px; }
+                </style>
+            </head>
+            <body>
+                <h1>${selectedMap}</h1>
+                <div class="map-container">
+                    <img src="${imgSrc}" alt="${selectedMap}">
+                    ${attackWaves.map(wave => `<div class="pointer" style="left: ${wave.x}px; top: ${wave.y}px;">${wave.lagerId}</div>`).join('')}
+                </div>
+                <h2>Abenteuerdetails</h2>
+                <p>${adventureDetails.type}</p>
+                <p>${adventureDetails.level}</p>
+                <p>${adventureDetails.players}</p>
+                <h2>Angriffswellen</h2>
+                ${attackWaves.map(wave => `
+                    <div>
+                        <h3>Lager ${wave.lagerId}</h3>
+                        <p>General: ${wave.general}</p>
+                        <p>Einheitentyp: ${wave.unitType}</p>
+                        <p>Anzahl der Einheiten: ${wave.units}</p>
+                    </div>
+                `).join('')}
+            </body>
+            </html>
+        `;
 
-// attack_waves.js
-function addAttackWave(lagerId, generalName, garnison, unitType, units) {
-    const wave = {
-        lagerId: lagerId,
-        general: generalName,
-        garnison: garnison,
-        unitType: unitType,
-        units: units
-    };
-    return wave;
-}
+        const blob = new Blob([mapHtml], { type: 'text/html' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `${selectedMap}_Taktikarte.html`;
+        link.click();
+    }
+
+    document.getElementById('generate-map').addEventListener('click', generateAndDownloadMap);
+});
