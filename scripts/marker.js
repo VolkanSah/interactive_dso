@@ -1,5 +1,7 @@
 // marker.js " Private license" copyright volkan kücükbudak
 // You may not use my marker without my permission
+// marker.js " Private license" copyright volkan kücükbudak
+// You may not use my marker without my permission
 document.addEventListener('DOMContentLoaded', function() {
     const mapContainer = document.getElementById('map-container');
     const mainMap = document.getElementById('main-map');
@@ -7,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let markerId = 0;
 
     mapContainer.addEventListener('click', function(event) {
-        if (event.target !== mainMap) return; // Verhindert das Setzen eines Markers auf einem bestehenden Marker
+        if (event.target !== mainMap) return; // Prevents placing a marker on an existing marker
         const rect = mainMap.getBoundingClientRect();
         const x = ((event.clientX - rect.left) / rect.width) * 100;
         const y = ((event.clientY - rect.top) / rect.height) * 100;
@@ -22,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         marker.className = 'pointer';
         marker.style.left = `${x}%`;
         marker.style.top = `${y}%`;
-        marker.style.width = '30px';   // Größe anpassen
-        marker.style.height = '30px';  // Größe anpassen
+        marker.style.width = '30px';   // adjust size
+        marker.style.height = '30px';  // adjust size
         marker.textContent = id;
         marker.draggable = true;
 
@@ -66,9 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         lagerList.appendChild(listItem);
 
-        // Dynamisch Generäle laden
+        // Dynamically load generals
         populateGeneralSelector(`general-type-select-${id}`);
-        // Einheitentyp-Event-Listener hinzufügen
+        // Add device type event listener
         document.getElementById(`units-type-select-${id}`).addEventListener('change', function(event) {
             const selectedType = event.target.value;
             populateUnitInputs(id, selectedType);
@@ -100,3 +102,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
