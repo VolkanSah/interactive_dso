@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let markerId = 0;
 
     mapContainer.addEventListener('click', function(event) {
-        if (event.target !== mainMap) return; // Prevents placing a marker on an existing marker
+        if (event.target !== mainMap) return; // Verhindert das Setzen eines Markers auf einem bestehenden Marker
         const rect = mainMap.getBoundingClientRect();
         const x = ((event.clientX - rect.left) / rect.width) * 100;
         const y = ((event.clientY - rect.top) / rect.height) * 100;
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         marker.className = 'pointer';
         marker.style.left = `${x}%`;
         marker.style.top = `${y}%`;
-        marker.style.width = '30px';   // adjust size
-        marker.style.height = '30px';  // adjust size
+        marker.style.width = '30px';   // Größe anpassen
+        marker.style.height = '30px';  // Größe anpassen
         marker.textContent = id;
         marker.draggable = true;
 
@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         lagerList.appendChild(listItem);
 
-        // Dynamically load generals
+        // Dynamisch Generäle laden
         populateGeneralSelector(`general-type-select-${id}`);
-        // Add device type event listener
+        // Einheitentyp-Event-Listener hinzufügen
         document.getElementById(`units-type-select-${id}`).addEventListener('change', function(event) {
             const selectedType = event.target.value;
             populateUnitInputs(id, selectedType);
