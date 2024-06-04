@@ -1,68 +1,47 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive DSO </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>DSO Taktikarten Generator</title>
+    <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/main.css">
-        <link rel="stylesheet" href="assets/styles/reset.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">DSO </a>
-    </nav>
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Karte wählen</h1>
-                <select id="map-select" class="form-control">
-                    <!-- Kartenoptionen werden hier dynamisch geladen -->
-                </select>
+    <header>
+        <h1>DSO Taktikarten Generator</h1>
+    </header>
+    <main>
+        <section id="map-container">
+            <img id="main-map" src="assets/maps/main.webp" alt="Hauptkarte">
+        </section>
+        <section id="map-details">
+            <label for="map-selector">Wähle ein Abenteuer:</label>
+            <select id="map-selector">
+                <!-- Dynamisch gefüllte Optionen -->
+            </select>
+            <div id="adventure-details">
+                <p id="adventure-type"></p>
+                <p id="adventure-level"></p>
+                <p id="adventure-players"></p>
             </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <div id="map-container">
-                    <!-- Die Taktikkarte wird hier angezeigt -->
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <h2>Lagerliste</h2>
-                <ul id="lager-list" class="list-group">
-                    <!-- Lager werden hier dynamisch hinzugefügt -->
-                </ul>
-            </div>
-        </div>
-    </div>
-    <footer class="bg-light text-center mt-4">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#!" class="text-dark">Link 1</a></li>
-                        <li><a href="#!" class="text-dark">Link 2</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#!" class="text-dark">Link 3</a></li>
-                        <li><a href="#!" class="text-dark">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        </section>
+        <section id="marker-container">
+            <!-- Marker-Funktionalität -->
+        </section>
+        <section id="lager-list">
+            <!-- Liste der Lager und Angriffswellen -->
+        </section>
+    </main>
+    <footer>
+        <button id="generate-map">Taktikarte generieren und herunterladen</button>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/map_loader.js"></script>
     <script src="scripts/marker.js"></script>
-    <script src="scripts/attack_waves.js"></script>
     <script src="scripts/generals.js"></script>
+    <script src="scripts/units.js"></script>
+    <script src="scripts/attack_waves.js"></script>
 </body>
 </html>
