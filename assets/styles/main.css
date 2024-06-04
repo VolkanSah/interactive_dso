@@ -14,12 +14,19 @@
 
 .pointer {
     position: absolute;
-    cursor: pointer;
-    z-index: 10;
+    background: darkred;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
     width: 30px;
     height: 30px;
-    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
 }
+
 
 .list-group-item {
     display: flex;
