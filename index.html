@@ -6,48 +6,7 @@
     <title>DSO AT</title>
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/main.css">
-    <script>
-// Inline JavaScript loader
-function loadScriptsSequentially(scripts, callback) {
-    if (!scripts.length) {
-        callback();
-        return;
-    }
-    
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = scripts[0];
-    script.onload = () => loadScriptsSequentially(scripts.slice(1), callback);
-    script.onerror = () => {
-        console.error(`Error loading script: ${scripts[0]}`);
-        loadScriptsSequentially(scripts.slice(1), callback);
-    };
-    document.head.appendChild(script);
-}
 
-function initializeApp() {
-    console.log('All scripts loaded and app initialized.');
-    // Your main application initialization code here
-    if (typeof main === 'function') {
-        main();
-    }
-}
-
-// List of scripts to load in sequence
-const scriptsToLoad = [
-    'scripts/main.js',
-    'scripts/marker.js',
-    'scripts/generals.js',
-    'scripts/units.js',
-    'scripts/attack_waves.js',
-    'scripts/limit-time.js' // Assuming this is where the unload event listener is
-];
-
-// Load the scripts and then initialize the application
-document.addEventListener('DOMContentLoaded', () => {
-    loadScriptsSequentially(scriptsToLoad, initializeApp);
-});
-</script>
 </head>
 <body>
     <header>
@@ -79,5 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <footer>
         <button id="generate-map">Taktikarte generieren und herunterladen</button>
     </footer>
+    <script src="scripts/generals.js" type="text/javascript">
+    <script src="scripts/units.js" type="text/javascript">
+    <script src="scripts/attack_waves.js" type="text/javascript">
+    <script src="scripts/marker.js" type="text/javascript">
+    <script src="scripts/main.js" type="text/javascript">
 </body>
 </html>
