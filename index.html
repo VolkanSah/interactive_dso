@@ -1,16 +1,18 @@
 <!DOCTYPE html>
+<!-- Code copyright by Volkan Sah -->
+<!-- Images used Trademarket by BlueByte (Ubisoft) -->
+<!-- This is an community project, for free -->
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSO AT</title>
+    <title>DSO Taktikarten Generator</title>
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/main.css">
-
 </head>
 <body>
     <header>
-        <section id="map-details">
+    <section id="map-details">
             <label for="map-selector">Wähle ein Abenteuer:</label>
             <select id="map-selector">
                 <!-- Dynamisch gefüllte Optionen -->
@@ -23,25 +25,25 @@
         </section>
     </header>
     <main>
+
         <section id="map-container">
             <img id="main-map" src="assets/maps/main.webp" alt="Hauptkarte">
         </section>
-        <section id="marker-container" style="position: relative; width: 100%; height: 500px;">
+
+        <section id="marker-container">
             <!-- Marker-Funktionalität -->
         </section>
         <section id="lager-list">
-            <ul id="demoLagerList">
-                <!-- Liste der Lager und Angriffswellen -->
-            </ul>
+            <!-- Liste der Lager und Angriffswellen -->
         </section>
     </main>
     <footer>
         <button id="generate-map">Taktikarte generieren und herunterladen</button>
     </footer>
-    <script src="scripts/generals.js" type="text/javascript">
-    <script src="scripts/units.js" type="text/javascript">
-    <script src="scripts/attack_waves.js" type="text/javascript">
-    <script src="scripts/marker.js" type="text/javascript">
-    <script src="scripts/main.js" type="text/javascript">
+    <script src="scripts/main.js"></script>
+    <script src="scripts/marker.js"></script>
+    <script src="scripts/generals.js"></script>
+    <script src="scripts/units.js"></script>
+    <script src="scripts/attack_waves.js"></script>
 </body>
 </html>
