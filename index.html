@@ -1,10 +1,4 @@
-
 <!DOCTYPE html>
-<!-- Code copyright by Volkan Sah -->
-<!-- Images used Trademarket by BlueByte (Ubisoft) -->
-<!-- This is an community project, for free -->
-
-
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -13,33 +7,50 @@
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/main.css">
     <script>
-// DOM Script control source: https://github.com/VolkanSah/JavaScript-DOM-Control-and-Event-Listeners/blob/main/example_dom_load.js
-function loadScript(url, callback) {
-    const script = document.createElement('script'); // Create a new script element
-    script.type = 'text/javascript'; // Set the script type
-    script.src = url; // Set the script source to the provided URL
-    script.onload = callback; // Set the callback function to execute once the script is loaded
-    document.head.appendChild(script); // Append the script element to the document head
-}
-function initializeApp() {
-    // Your initialization code here
-    console.log('All scripts loaded and app initialized.'); // Log a message indicating that the app has been initialized
+// Inline JavaScript loader
+function loadScriptsSequentially(scripts, callback) {
+    if (!scripts.length) {
+        callback();
+        return;
+    }
+    
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = scripts[0];
+    script.onload = () => loadScriptsSequentially(scripts.slice(1), callback);
+    script.onerror = () => {
+        console.error(`Error loading script: ${scripts[0]}`);
+        loadScriptsSequentially(scripts.slice(1), callback);
+    };
+    document.head.appendChild(script);
 }
 
-// Load the necessary scripts in sequence and then initialize the application
-loadScript('scripts/main.js', function() { // Load the main script
-loadScript('scripts/marker.js', function() { // Load the marker script
-loadScript('scripts/generals.js', function() { // Load the marker script
-loadScript('scripts/units.js', function() { // Load the marker script
-loadScript('scripts/attack_waves.js', function() { // Load the marker script
-loadScript('scripts/attack_waves.js', initializeApp); // Once the scripts are loaded, load the last script and initialize the application!
-    });
+function initializeApp() {
+    console.log('All scripts loaded and app initialized.');
+    // Your main application initialization code here
+    if (typeof main === 'function') {
+        main();
+    }
+}
+
+// List of scripts to load in sequence
+const scriptsToLoad = [
+    'scripts/main.js',
+    'scripts/marker.js',
+    'scripts/generals.js',
+    'scripts/units.js',
+    'scripts/attack_waves.js'
+];
+
+// Load the scripts and then initialize the application
+document.addEventListener('DOMContentLoaded', () => {
+    loadScriptsSequentially(scriptsToLoad, initializeApp);
 });
 </script>
 </head>
 <body>
     <header>
-    <section id="map-details">
+        <section id="map-details">
             <label for="map-selector">Wähle ein Abenteuer:</label>
             <select id="map-selector">
                 <!-- Dynamisch gefüllte Optionen -->
@@ -52,16 +63,16 @@ loadScript('scripts/attack_waves.js', initializeApp); // Once the scripts are lo
         </section>
     </header>
     <main>
-
         <section id="map-container">
             <img id="main-map" src="assets/maps/main.webp" alt="Hauptkarte">
         </section>
-
-        <section id="marker-container">
+        <section id="marker-container" style="position: relative; width: 100%; height: 500px;">
             <!-- Marker-Funktionalität -->
         </section>
         <section id="lager-list">
-            <!-- Liste der Lager und Angriffswellen -->
+            <ul id="demoLagerList">
+                <!-- Liste der Lager und Angriffswellen -->
+            </ul>
         </section>
     </main>
     <footer>
