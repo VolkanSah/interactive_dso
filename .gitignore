@@ -1,1 +1,6 @@
 test_tools/duplicate_checker.py
+test_tools/map_loader_check.py
+test_tools/*
+test_tools/
+README.md
+note.js
