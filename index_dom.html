@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<!-- Code copyright by Volkan Sah -->
+<!-- Images used Trademarket by BlueByte (Ubisoft) -->
+<!-- This is an community project, for free -->
+
+<script>
+// DOM Script control source: https://github.com/VolkanSah/JavaScript-DOM-Control-and-Event-Listeners/blob/main/example_dom_load.js
+function loadScript(url, callback) {
+    const script = document.createElement('script'); // Create a new script element
+    script.type = 'text/javascript'; // Set the script type
+    script.src = url; // Set the script source to the provided URL
+    script.onload = callback; // Set the callback function to execute once the script is loaded
+    document.head.appendChild(script); // Append the script element to the document head
+}
+function initializeApp() {
+    // Your initialization code here
+    console.log('All scripts loaded and app initialized.'); // Log a message indicating that the app has been initialized
+}
+
+// Load the necessary scripts in sequence and then initialize the application
+loadScript('scripts/main.js', function() { // Load the main script
+loadScript('scripts/marker.js', function() { // Load the marker script
+loadScript('scripts/generals.js', function() { // Load the marker script
+loadScript('scripts/units.js', function() { // Load the marker script
+loadScript('scripts/attack_waves.js', function() { // Load the marker script
+loadScript('scripts/attack_waves.js', initializeApp); // Once the scripts are loaded, load the last script and initialize the application!
+    });
+});
+</script>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSO AT</title>
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+    <header>
+    <section id="map-details">
+            <label for="map-selector">Wähle ein Abenteuer:</label>
+            <select id="map-selector">
+                <!-- Dynamisch gefüllte Optionen -->
+            </select>
+            <div id="adventure-details">
+                <p id="adventure-type"></p>
+                <p id="adventure-level"></p>
+                <p id="adventure-players"></p>
+            </div>
+        </section>
+    </header>
+    <main>
+
+        <section id="map-container">
+            <img id="main-map" src="assets/maps/main.webp" alt="Hauptkarte">
+        </section>
+
+        <section id="marker-container">
+            <!-- Marker-Funktionalität -->
+        </section>
+        <section id="lager-list">
+            <!-- Liste der Lager und Angriffswellen -->
+        </section>
+    </main>
+    <footer>
+        <button id="generate-map">Taktikarte generieren und herunterladen</button>
+    </footer>
+</body>
+</html>
